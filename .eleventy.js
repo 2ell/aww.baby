@@ -6,13 +6,16 @@ module.exports = function(eleventyConfig) {
     return {    
     // When a passthrough file is modified, rebuild the pages:
         passthroughFileCopy: true,
-            
+    // Trying something
+        markdownTemplateEngine: 'njk',
+        dataTemplateEngine: 'njk',
+        htmlTemplateEngine: 'njk',
     // Set custom directories for input, output, includes, and data:
         dir: {      
             input: "src",      
             includes: "_includes",      
             data: "_data",      
-            output: "_site"    
+            output: "site"    
         }  
     };
 };
