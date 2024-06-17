@@ -1,12 +1,13 @@
 module.exports = function(eleventyConfig) {  
 // Copy `src/style.css` to `_site/style.css`  
     eleventyConfig.addPassthroughCopy("src/style.css");
-    
+    eleventyConfig.setTemplateFormats("html,liquid,njk");
     
     return {    
     // When a passthrough file is modified, rebuild the pages:
         passthroughFileCopy: true,
-    // Trying something
+    // Templates
+		templateFormats: ["html", "liquid", "njk"],
         markdownTemplateEngine: 'njk',
         dataTemplateEngine: 'njk',
         htmlTemplateEngine: 'njk',
