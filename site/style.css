@@ -1,4 +1,40 @@
+@import url(https://fonts.bunny.net/css?family=atkinson-hyperlegible:400,400i);
+@import url(https://fonts.bunny.net/css?family=atkinson-hyperlegible:400,400i|beth-ellen:400);
+
+
 body {
+    margin: 0;
     color: black;
-    background-color: white;   
+    background-color: white;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+}
+
+.header {
+    margin: 1em;
+    border-bottom: 1px solid black;
+    display: flex;
+    gap: 2em;
+}
+
+.title {
+    font-size: 2em;
+    font-family: 'Beth Ellen', handwriting;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    line-height: fit-content;
+    transform: rotate(-4deg);
+}
+
+.nav {
+    list-style-type: none;
+    & li {
+        display: inline-block;
+        padding: 1em;
+}
+}
+
+.content {
+    max-width: 30em;
+    margin: auto;
+    padding: 1em;
 }

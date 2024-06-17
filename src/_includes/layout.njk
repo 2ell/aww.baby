@@ -12,14 +12,25 @@
     </head>
     
     <section class="header">
-        <h1>aww.baby</h1>
-        <p>a blog celebrating the interior life</p>
+        <div>
+            <h1 class="title">aww.baby</h1>
+            <p>a blog celebrating the interior life</p>
+        </div>
+        <div>
+            <ul class="nav">
+                <li>home</li>
+                <li>archive</li>
+                <li>kudos</li>
+            </ul>
+        </div>
     </section>
 
     <body>  
+        <div class="content">
         <!-- Grab the content from the page data, dump it here, and mark it as safe -->
         <!-- Safe docs: https://mozilla.github.io/nunjucks/templating.html#safe -->
        {{ content | safe }}
+        </div>
     </body>
 
 </html>
