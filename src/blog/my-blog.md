@@ -6,4 +6,4 @@ tags: blog
 
 # Welcome
 
-These are profound thoughts.
+These are profound thoughts. And stuff.
