@@ -4,29 +4,52 @@
 
 body {
     margin: 0;
-    color: black;
+    color: rgb(75, 79, 97);
     background-color: white;
     font-family: 'Atkinson Hyperlegible', sans-serif;
+    line-height: 1.8em;
+}
+
+a {
+    text-transform: lowercase;
+    text-decoration: none;
+    color: darkcyan;
+    border-bottom: 1px solid darkcyan;   
 }
 
 .header {
     margin: 1em;
     border-bottom: 1px solid black;
     display: flex;
+    align-content: stretch;
+    align-items: stretch;
+    max-width: 100%;
     gap: 2em;
 }
 
-.title {
+.title a {
+    color: white;
     font-size: 2em;
     font-family: 'Beth Ellen', handwriting;
     margin-bottom: 0;
     padding-bottom: 0;
     line-height: fit-content;
     transform: rotate(-4deg);
+    text-shadow: 2px 2px 10px rgba(5, 140, 133, 0.56),
+                 3px 3px 5px rgba(120, 190, 185, 0.946),
+                 4px 4px 10px rgba(169, 191, 189, 0.946);
+    border-bottom: 0;
 }
 
 .nav {
+    position: absolute;
+    right: 0;
+    top: 0;
     list-style-type: none;
+    text-align: right;
+    & ul {
+        text-align: right;
+    }
     & li {
         display: inline-block;
         padding: 1em;
@@ -34,7 +57,15 @@ body {
 }
 
 .content {
-    max-width: 30em;
+    max-width: 40em;
     margin: auto;
     padding: 1em;
+    & h1 {
+        border-bottom: 1px solid darkcyan;
+    }
+}
+
+hr {
+    border: 0;
+    margin: 2em;
 }

@@ -1,11 +1,20 @@
 ---
-layout: post.njk
-title: Welcome
+layout: layout.njk
+title: Welcome to my blog
 tags: blog
+date: 2024-06-17
 ---
 
-# Welcome
+# Welcome to my (still-very-under-construction) blog
 
-These are profound thoughts. And stuff.
+These will soon be profound thoughts (probably).
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/d269791b-9ca2-4410-a056-b4e996e5f5c0/deploy-status)](https://app.netlify.com/sites/hilaurel/deploys)
+---
+
+### the current todo list:
+- Fix timestamps and date syntax
+- Components: footer, nav
+- Collections for photos, types of text posts
+- Tags
+- Pagination
+- Icon packs
