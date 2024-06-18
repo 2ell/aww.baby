@@ -7,10 +7,10 @@
     <!-- Link CSS file(s) --> 
     <link rel="stylesheet" href="/style.css">
     <!-- Grab title from the page data and dump it here --> 
-         <title>{{ title }}{% if page.url != '/' %} | {{ meta.siteName }}{% endif %}</title>
+         <title>{{ title }}{% if page.url != '/' %} | aww.baby{% endif %}</title>
     </head>
     
-    <section class="header">
+    <header>
         <div>
             <h1 class="title"><a href="/">aww.baby</a></h1>
             <p>a blog celebrating the interior life</p>
@@ -18,14 +18,21 @@
         <div>
             {% include "components/nav.njk" %}
         </div>
-    </section>
+    </header>
 
-    <body>  
+    <body>
         <div class="content">
         <!-- Grab the content from the page data, dump it here, and mark it as safe -->
         <!-- Safe docs: https://mozilla.github.io/nunjucks/templating.html#safe -->
        {{ content | safe }}
         </div>
+
+        <footer>
+            <div>
+              <p>made with love by laurel</p>
+            </div>
+          </footer>
+
     </body>
 
 </html>

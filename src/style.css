@@ -17,7 +17,7 @@ a {
     border-bottom: 1px solid darkcyan;   
 }
 
-.header {
+header {
     margin: 1em;
     border-bottom: 1px solid black;
     display: flex;
@@ -68,4 +68,11 @@ a {
 hr {
     border: 0;
     margin: 2em;
+}
+
+
+footer {
+    margin-top: 2em;
+    padding: 0 1em 1em 1em;
+    border-top: 1px solid black;
 }
