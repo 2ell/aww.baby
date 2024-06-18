@@ -3,7 +3,8 @@
   "author": "laurel",
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "@grimlink/eleventy-plugin-lucide-icons": "^2.0.4"
+    "@grimlink/eleventy-plugin-lucide-icons": "^2.0.4",
+    "eleventy-plugin-embed-spotify": "^1.3.0"
   },
   "scripts": {
     "start": "eleventy"

@@ -1,6 +1,8 @@
 // Plugins
       const lucideIcons = require("@grimlink/eleventy-plugin-lucide-icons");
-      const { DateTime } = require("luxon");     // Import "DateTime" from Luxon
+      const embedSpotify = require("eleventy-plugin-embed-spotify");
+      const { DateTime } = require("luxon");   // Import "DateTime" from Luxon
+      
 
 module.exports = function(eleventyConfig) {  
     
@@ -33,6 +35,17 @@ module.exports = function(eleventyConfig) {
         "stroke": "currentColor",
         "stroke-width": 2
     });
+
+    eleventyConfig.addPlugin(embedSpotify, {
+        allowAttrs: 'encrypted-media',
+        // The Spotify player iframe is always wrapped in a div with this class.
+        // Substitute your preferred string to rename the wrapper class
+        embedClass: 'eleventy-plugin-embed-spotify',
+        // Default iframe height, in pixels
+        height: '380',
+        // default iframe width, in pixels
+        width: '100%'
+      });
 
     return {    
     // When a passthrough file is modified, rebuild the pages:
