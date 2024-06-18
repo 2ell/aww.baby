@@ -174,12 +174,7 @@ hr {
     text-align: center;
 }
 
-body > footer {
-    margin-top: 1em;
-    padding-top: var(--layout-spacing);
-  }
-  
-  body > footer div {
+body > footer div {
     border-top: 1px solid var(--blue);
     padding-top: 0.5em;
     font-size: 0.9em;
@@ -240,12 +235,12 @@ article img {
     display: flexbox;
     background-color: transparent;
     padding: 1em;
-    margin-bottom: 5em;
     border: 0;
     min-width: 100%;
     max-width: 40em;
+    border: 1px solid transparent;
     &:hover {
-        background-color: var(--yellow);
+        border: 1px solid var(--overlay0);
         cursor: pointer;
     }
 }

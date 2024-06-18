@@ -7,24 +7,4 @@ This will eventually become an introduction blurb and welcome message. Or it mig
 
 <hr>
 
-    {% for post in collections.blog %}
-
-    <button class="post-preview">
-        <a href="{{ post.url }}">  
-
-    <div class="post-text">
-        <span class="post-date">2024-06-17</span>
-    <h1>{{ post.data.title }}</h1>
-    </div>
-
-    <div class="post-thumb">
-        <img src="{{ post.data.photo }}">
-    </div>
-</a>
-</button>
-
-        {% endfor %}
-
-        <div class="pagination">
-<span>Next Page</span>
-</div>
+{% include "components/postlist.njk" %}

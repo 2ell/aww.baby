@@ -5,6 +5,7 @@ layout: base.njk
 <section class="heading">
   <h1>{{ title }}</h1>
 </section>
+<p> posted {{ page.date | postDate }}</p>
 <main>
   <article>
     {{ content | safe }}

@@ -9,24 +9,38 @@ module.exports = function(eleventyConfig) {
     // Copy `src/style.css` to `_site/style.css`  
     eleventyConfig.addPassthroughCopy("src/style.css");
     
+      
+    // To enable merging of tags 
+    eleventyConfig.setDataDeepMerge(true)
+    
     // Get current year
     eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
-    // Excerpt filter | usage: <p>{{ post.templateContent | excerpt }}</p>
-    eleventyConfig.addFilter("excerpt", (post) => {
-        const content = post.replace(/(<([^>]+)>)/gi, "");
-        return content.substr(0, content.lastIndexOf(" ", 200)) + "...";
-    });
-
-    // Non-breaking space at end of string for titles (Usage: {{ title | addNbsp }})
-    eleventyConfig.addFilter("addNbsp", (str) => {
-        if (!str) {
-          return;
-        }
-        let title = str.replace(/((.*)\s(.*))$/g, "$2&nbsp;$3");
-        title = title.replace(/"(.*)"/g, '\\"$1\\"');
-        return title;
+    eleventyConfig.addFilter("readableTimestamp", function (dateVal, locale = "en-us") {
+        var theDate = new Date(dateVal);
+        const options = {
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+          hour12: true,
+          hour: '2-digit',
+          minute: '2-digit'
+        };
+        return theDate.toLocaleString(locale, options);
       });
+
+    eleventyConfig.addFilter("postDate", (dateObj) => {
+        return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
+      });
+
+    // To create excerpts
+    eleventyConfig.setFrontMatterParsingOptions({
+        excerpt: true,
+        excerpt_alias: 'post_excerpt',
+        excerpt_separator: '<!-- excerpt -->'
+  })
+
 
       eleventyConfig.addPlugin(lucideIcons, {
         "class": "custom-class",
