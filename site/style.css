@@ -129,7 +129,9 @@ header {
 }
 
 #description {
+    display: none;
     padding: 1em;
+    font-size: 0.9em;
     font-family: 'Inclusive Sans', sans-serif;
     color: var(--surface2);
 }
@@ -159,10 +161,6 @@ nav [aria-current="page"] {
     max-width: 40em;
     margin: auto;
     padding: 2em;
-    border: 1px solid var(--subtext);
-    & h1, h2, h3, h4, h5, h6 {
-        text-transform: capitalize;
-    }
 }
 
 hr {
@@ -171,19 +169,22 @@ hr {
 }
 
 
-footer {
-    color: var(--surface0);
-    margin-top: 2em;
-    padding: 0 1em 1em 1em;
-    border-top: 1px solid var(--surface0);
 
-}
+body > footer {
+    margin-top: auto;
+    padding-top: var(--layout-spacing);
+  }
+  
+  body > footer div {
+    border-top: 1px solid var(--surface0);
+    padding-top: 0.1em;
+    font-size: 0.9em;
+    color: var(--surface0);
+  }
 
 #footer-cen {
-    max-width: 80%;
     margin: auto;
     & p {
-        font-size: 0.9em;
         text-align: center;
     }
 }
