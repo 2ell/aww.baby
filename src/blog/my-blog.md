@@ -11,7 +11,7 @@ These will soon be profound thoughts (probably).
 
 ### the current todo list:
 - ~~Fix timestamps and date syntax~~
-- Components: footer, nav
+- ~~Components: footer, nav~~
 - Collections for photos, types of text posts
 - Tags
 - Pagination

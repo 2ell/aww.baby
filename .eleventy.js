@@ -1,3 +1,7 @@
+// Plugins
+      const lucideIcons = require("@grimlink/eleventy-plugin-lucide-icons");
+      const { DateTime } = require("luxon");     // Import "DateTime" from Luxon
+
 module.exports = function(eleventyConfig) {  
     
     // Copy `src/style.css` to `_site/style.css`  
@@ -5,9 +9,6 @@ module.exports = function(eleventyConfig) {
     
     // Get current year
     eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
-    
-    // Import "DateTime" from Luxon
-    const { DateTime } = require("luxon");
 
     // Excerpt filter | usage: <p>{{ post.templateContent | excerpt }}</p>
     eleventyConfig.addFilter("excerpt", (post) => {
@@ -24,6 +25,14 @@ module.exports = function(eleventyConfig) {
         title = title.replace(/"(.*)"/g, '\\"$1\\"');
         return title;
       });
+
+      eleventyConfig.addPlugin(lucideIcons, {
+        "class": "custom-class",
+        "width": 24,
+        "height": 24,
+        "stroke": "currentColor",
+        "stroke-width": 2
+    });
 
     return {    
     // When a passthrough file is modified, rebuild the pages:
