@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-    <head>  
+<head>  
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Link CSS file(s) --> 
     <link rel="stylesheet" href="/style.css">
     <!-- Grab title from the page data and dump it here --> 
-         <title>aww.baby | {{title}}</title>
+         <title>{{ title }}{% if page.url != '/' %} | {{ meta.siteName }}{% endif %}</title>
     </head>
     
     <section class="header">
@@ -17,11 +16,7 @@
             <p>a blog celebrating the interior life</p>
         </div>
         <div>
-            <ul class="nav">
-                <li><a href="/">home</a></li>
-                <li><a href="/">archive</a></li>
-                <li><a href="/">kudos</a></li>
-            </ul>
+            {% include "components/nav.njk" %}
         </div>
     </section>
 

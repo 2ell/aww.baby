@@ -1,7 +1,30 @@
 module.exports = function(eleventyConfig) {  
-// Copy `src/style.css` to `_site/style.css`  
+    
+    // Copy `src/style.css` to `_site/style.css`  
     eleventyConfig.addPassthroughCopy("src/style.css");
     
+    // Get current year
+    eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+    
+    // Import "DateTime" from Luxon
+    const { DateTime } = require("luxon");
+
+    // Excerpt filter | usage: <p>{{ post.templateContent | excerpt }}</p>
+    eleventyConfig.addFilter("excerpt", (post) => {
+        const content = post.replace(/(<([^>]+)>)/gi, "");
+        return content.substr(0, content.lastIndexOf(" ", 200)) + "...";
+    });
+
+    // Non-breaking space at end of string for titles (Usage: {{ title | addNbsp }})
+    eleventyConfig.addFilter("addNbsp", (str) => {
+        if (!str) {
+          return;
+        }
+        let title = str.replace(/((.*)\s(.*))$/g, "$2&nbsp;$3");
+        title = title.replace(/"(.*)"/g, '\\"$1\\"');
+        return title;
+      });
+
     return {    
     // When a passthrough file is modified, rebuild the pages:
         passthroughFileCopy: true,

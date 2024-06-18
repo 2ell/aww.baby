@@ -1,4 +1,6 @@
 {
+  "name": "aww.baby",
+  "author": "laurel",
   "dependencies": {
     "@11ty/eleventy": "^2.0.1"
   },
