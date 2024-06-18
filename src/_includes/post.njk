@@ -3,9 +3,10 @@ layout: base.njk
 ---
 
 <section class="heading">
+  <p class="page-date">{{ page.date | postDate }}</p>
+  <br>
   <h1>{{ title }}</h1>
 </section>
-<p> posted {{ page.date | postDate }}</p>
 <main>
   <article>
     {{ content | safe }}
