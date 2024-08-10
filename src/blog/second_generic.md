@@ -1,7 +1,8 @@
 ---
 layout: post.njk
-title: a second generic blog post
+title: Lemon drops sweet sweet roll macaroon
 tags: blog
+type: card
 photo: https://cdn.some.pics/laurel/65755692a9ffc.jpg
 ---
 

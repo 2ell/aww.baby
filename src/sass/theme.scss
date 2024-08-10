@@ -1,0 +1,70 @@
+:root {
+    --rosewater: rgb(245, 224, 220);
+--ros: 245, 224, 220;
+--flamingo: rgb(242, 205, 205);
+--flam: 242, 205, 205;
+--pink: rgb(245, 194, 231);
+--pnk: 245, 194, 231;
+--mauve: rgb(203, 166, 247);
+--mve: 203, 166, 247;
+--maroon: rgb(235, 160, 172);
+--mrn: 235, 160, 172;
+--red: rgb(243, 139, 168);
+--rd: 243, 139, 168;
+--yellow: rgb(249, 226, 175);
+--yel: 249, 226, 175;
+--peach: rgb(250, 179, 135);
+--pch: 250, 179, 135;
+--sky: rgb(137, 220, 235);
+--ski: 137, 220, 235;
+--teal: rgb(148, 226, 213);
+--tea: 148, 226, 213;
+--green: rgb(166, 227, 161);
+--grn: 166, 227, 161;
+--sapphire: rgb(116, 199, 236);
+--sap: 116, 199, 236;
+--blue: rgb(137, 180, 250);
+--blu: 137, 180, 250;
+--lavender: rgb(180, 190, 245);
+--lav: 180, 190, 254;
+--text: rgb(231, 236, 255);
+--tx1: 231, 236, 255;
+--subtext: rgb(166, 173, 200);
+--tx2: 166, 173, 200;
+--overlay0: rgb(108, 112, 134);
+--ovr0: 108, 112, 134;
+--overlay1: rgb(127, 132, 156);
+--ovr1: 127, 132, 156;
+--surface2: rgb(88, 91, 112);
+--sur2: 88, 91, 112;
+--surface1: rgb(69, 71, 90);
+--sur1: 69, 71, 90;
+--surface0: rgb(49, 50, 68);
+--sur0: 49, 50, 68;
+--base: rgb(30, 30, 46);
+--bb: 30, 30, 46;
+--mantle: rgb(24, 24, 37);
+--mtl: 24, 24, 37;
+--crust: rgb(17, 17, 27);
+--crst: 17, 17, 27;
+
+--alt-accent: rgb(115, 128, 202);
+--alt-a: 115, 128, 202;
+--highlight: rgba(115, 128, 202, 0.822);
+}
+
+
+body {
+    color: var(--surface2);
+}
+
+nav a {
+    color: var(--surface2);
+    &:hover {
+        color: --sapphire;
+    }
+}
+
+.card {
+    background-color: transparent;
+}

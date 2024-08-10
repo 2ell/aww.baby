@@ -2,8 +2,13 @@
 layout: post.njk
 title: a generic blog post
 tags: blog
+type: text
 date: 2024-06-17
 photo: https://cdn.some.pics/laurel/65766b3770711.jpg
+caption: Liquorice sweet roll cupcake
+categories:
+    - quotes
+    - local
 ---
 
 ![Cotton candy sunrise greeting a quiet inner city street at the cusp of fall. Tree branches and traffic poles are seen by their silhouettes against the pastel swirl of the morning sun and sky.](https://cdn.some.pics/laurel/65766b3770711.jpg)

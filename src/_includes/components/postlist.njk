@@ -1,17 +1,20 @@
 
+<div class="post-list">
 {% for post in collections.blog | reverse %}
 
-<button class="post-preview">
-    <a href="{{ post.url }}">  
-
-<div class="post-text">
-<h1>{{ post.data.title }}</h1>
-</div>
-
-<div class="post-thumb">
-    <img src="{{ post.data.photo }}">
-</div>
-</a>
-</button>
 <hr>
+<div class="{{ post.data.type }}">
+    <img src="{{ post.data.photo }}" class="card__image"/>
+    <div class="card__content">
+      <div class="card__date">
+        <time span>{{ post.date | postDate }}</time>
+    </div>
+      <a href="{{ post.url }}"><span class="card__title">{{ post.data.title }}</span></a>
+    </div>
+    <div class="card__photodate">
+    <time span>{{ post.date | postDate }}</time>
+    </div>
+    <div class="card__caption"><a href="{{ post.url }}">{{ post.data.caption }}</a></div>
+  </div>
     {% endfor %}
+</div>
