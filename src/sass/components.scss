@@ -1,10 +1,26 @@
 @use "theme";
 
-@mixin reset-list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
+
+/*
+┌────────────────────────────────────────┐
+GENERAL USE                             [0]
+└────────────────────────────────────────┘
+*/
+
+/* responsive
+/* ──────────────────────────────────── */
+
+@mixin mediaBig {
+    @media (min-width: 590px) {
+    @content;
+    }
+}
+
+    @mixin reset-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
   
   @mixin horizontal-list {
     @include reset-list;
@@ -13,194 +29,312 @@
         display: inline-block;
         margin: {
           left: -2px;
-          right: 2em;
+          right: 1em;
         }
       }
     }
 
 /*
-┌────────────────────────────────────────┐
-NAVIGATION                               
-└────────────────────────────────────────┘
+┌───────────────────────────────────────────────────┐
+NAVIGATION                                         [1]
+└───────────────────────────────────────────────────┘
 */
 
 
     nav ul {
         @include horizontal-list();
-    }
-
-/*
-┌────────────────────────────────────────┐
-PREVIEW CARDS                        
-└────────────────────────────────────────┘
-*/
-    @mixin mediaBig {
-        @media (min-width: 590px) {
-          @content;
+        & li {
+            font-size: 0.8em;
+        }
+        @include mediaBig {
+            font-size: 1.2em;
         }
     }
 
+/*
+┌───────────────────────────────────────────────────┐
+POST LIST CARDS                                    [1]
+└───────────────────────────────────────────────────┘
+*/
+
+
+
+/* mixins
+/* ──────────────────────────────────── */
+
+    @mixin cardTitle {
+        font-size: 2em;
+        color: var(--surface0);
+        margin-left: -4px;
+
+        @include mediaBig {
+            line-height: 1em;
+            font-size: 2.5em;
+            margin-bottom: 2em;
+        }
+    }
+
+    @mixin cardDate {
+        display: flex;
+        text-transform: uppercase;
+        margin-bottom: 4em;
+        text-align: right;
+        float: right;
+        margin: 0 0em 1em 1em;
+        line-height: 1em;
+        font-size: 0.8em;
+        color: var(--surface2);
+
+        @include mediaBig {
+            float: none;
+            margin: 0 0 2em 0;
+            text-align: right;
+        }
+    }
+
+
+/*
+POST LIST CARDS                       [ CARD ]
+└────────────────────────────────────────┘
+*/
+
+    .card {
+        max-width: 100%;
+        padding: 0em;
+        margin: 0.5em 0em 1em 0em;
+        font-family: var(--primary-font);
+        display: flex;
+        flex-direction: column;
+
+    @include mediaBig {
+        flex-direction: row;
+        align-items: stretch;
+        gap: 1em;
+        padding: 0;
+    }
+    }
+
+    .card-switch {
+        max-width: 100%;
+        padding: 0em;
+        margin: 0.5em 0em 1em 0em;
+        font-family: var(--primary-font);
+        display: flex;
+        flex-direction: column-reverse;
+
+    @include mediaBig {
+        flex-direction: row;
+        align-items: stretch;
+        gap: 1em;
+        padding: 0;
+    }
+    }
+
+
+/* card components
+──────────────────────────────────── */
+
+    :is(.card) .card__imageContainer {
+
+        @include mediaBig {
+        max-width: 50%;
+        min-width: 50%;
+        margin-bottom: 0;
+    }
+    }
+
+            .card__image {
+                width: 100%;
+                max-height: 150px;
+                object-fit: cover;
+                margin-bottom: 0;
+                
+                @include mediaBig {
+                max-height: none;
+                min-height: 400px;
+                margin-bottom: 0;
+                }
+            }
+
+
     .card__content {
         @include mediaBig {
-            width: 55%;
-            padding-left: 1em;
-          }
-          & a {
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        & a {
+            color: var(--link);
             text-decoration: none;
-          }
+        }
     }
-
-.text,
-.photo {
-    max-width: 100%;
-    padding: 1em;
-    margin: 1em;
-    font-family: var(--primary-font);
-    display: flex;
-    flex-direction: column;
-}
-
-.card,
-.quote {
-    max-width: 100%;
-    border: 0px solid var(--surface0);
-    font-family: var(--primary-font);
-    padding: 1em;
-    box-sizing: border-box;
-    margin: 1em;
-    display: flex;
-    flex-direction: column;
-
-  @include mediaBig {
-    flex-direction: row;
-    align-items: center;
-    margin: 1em;
-    padding: 1em;
-  }
-}
-
-@mixin cardTitle {
-    font-size: 2em;
-    padding-bottom: 1em;
-    line-height: 1em;
-    color: var(--surface2);
-    box-decoration-break: clone;
-    background-size: 100% 42%;
-    background-position: 0 85%;
-    background-repeat: no-repeat;
-    padding: 0 4px;
-    margin-left: -4px;
-
-    @include mediaBig {
-        font-size: 3.5em;
-    }
-}
-
-:is(.card) .card__title {
-    @include cardTitle;/*
-        background-image: linear-gradient(90deg, #74c6ecb3, #F5C2E7b3);
-        &:hover {
-            background-image: linear-gradient(90deg, #74c7ec, #F5C2E7);
-        }*/
-}
-
-:is(.quote) .card__title {
-    @include cardTitle;
-    /*
-    background-image: linear-gradient(90deg, #F9E2AFb3, #89DCEBb3);
-    &:hover {
-        background-image: linear-gradient(90deg, #F9E2AF, #89DCEB);
-    }*/
-}
-
-:is(.text) .card__content {
-    width: 100%;
-    & .card__title {
-    @include cardTitle;
-    margin-top: 1em;
-}
-}
-
-@mixin cardDate {
-    display: block;
-    text-transform: uppercase;
-    float: right;
-    margin-left: 1em;
-    margin-bottom: 2em;
-    border: 0px solid var(--surface2);
-    line-height: 1em;
-    padding: 0.2em .5em 0.2em .5em;
-    font-size: 0.8em;
-    color: var(--surface2);
-    @include mediaBig {
-        margin-bottom: 2em;
-      }
-}
-
-.card__date {
-    @include cardDate;
-}
-
-.card__image {
-    width: 100%;
-    max-height: 150px;
-    object-fit: cover;
-    margin-bottom: 18px;
     
-    @include mediaBig {
-      width: 45%;
-      max-height: none;
-      min-height: 400px;
-      margin-bottom: 0;
+            .card__title {
+                @include cardTitle;
+                max-width: fit-content;
+
+                @include mediaBig {
+                    margin-bottom: 2em;
+                    }
+            }
+        
+            .card__date {
+                @include cardDate;
+                margin: 0 0 0 1em;
+            }
+
+            .card__caption {
+                display: block;
+                margin: 1em 0 0 0;
+            }
+
+
+/*
+POST LIST CARDS                       [ TEXT ]
+└────────────────────────────────────────┘
+*/
+
+        
+    .text {
+        max-width: 100%;
+        padding: 0em;
+        margin: 0.5em 0em 1em 0em;
+        font-family: var(--primary-font);
+        display: flex;
+        flex-direction: column;
     }
-}
 
-:is(.photo) .card__image {
-    width: 100%;
-    max-height: 250px;
-    object-fit: cover;
-    margin-bottom: 18px;
-    
-    @include mediaBig {
-      width: 100%;
-      max-height: 400px;
-      min-height: 400px;
-      margin-bottom: 0;
-      margin: 0 auto;
+    :is(.text) .card__content {
+        width: 100%;
     }
-}
 
-:is(.photo) .card__content {
-    display: none;
-}
+    :is(.text) {
+        text-align: center;
+        & .card__date, .card__title, .card__image {
+            display: none;
+        }
+    }
 
-.card__photodate {
-    display: none;
-}
-:is(.photo, .text) .card__photodate {
-    font-size: 0.8em;
-    text-transform: uppercase;
-    text-align: center;
-    display: block;
-}
+/*
+POST LIST CARDS                      [ PHOTO ]
+└────────────────────────────────────────┘
+*/
 
-.card__caption {
-    @include cardTitle;
-    max-width: fit-content;
-    margin: 0 auto;
-/*    background-image: linear-gradient(90deg, #F5C2E7b3, #F5E0DCb3);
-    &:hover {
-        background-image: linear-gradient(90deg, #F5C2E7, #F5E0DC);
-          }*/
-    & a {
-        color: var(--surface2);
-        text-decoration: none;
-      }
-}
+    .photo {
+        max-width: 100%;
+        padding: 0em;
+        margin: 0.5em 0em 1em 0em;
+        font-family: var(--primary-font);
+        display: flex;
+        flex-direction: column;
+    }
 
-:is(.text) {
-    text-align: center;
-    & .card__date, .card__title, .card__image {
+    :is(.photo) .card__image {
+        width: 100%;
+        max-height: 250px;
+        object-fit: cover;
+        margin-bottom: 18px;
+        
+        @include mediaBig {
+          width: 100%;
+          max-height: 400px;
+          min-height: 400px;
+          margin-bottom: 0;
+          margin: 0 auto;
+        }
+    }
+
+    /* hide card content */
+    :is(.photo) .card__content {
         display: none;
     }
+    /* hide photo date */
+    .card__photodate {
+        display: none;
+    }
+
+    /* ──────────────────────────────────── */
+
+    :is(.photo, .text) .card__photodate {
+        font-size: 0.8em;
+        text-transform: uppercase;
+        text-align: center;
+        display: block;
+        margin-bottom: 1em;
+    }
+
+
+
+
+
+    /* ──────────────────────────────────── 
+
+$LIGHTING_FLOOR: 1;
+$LIGHTING_CEIL: 2;
+$LIGHTING_FLAT: 3;
+
+@mixin text3d(
+  $primary, 
+  $depth: 5, 
+  $shadowsteps: 5, 
+  $shadowincrementer: 3px, 
+  $shadowopacity: .5, 
+  $primaryshadowcolour: #000, 
+  $lighting: $LIGHTING_CEIL) {
+  $predefinedShadows: (
+    0 0 5px rgba($primaryshadowcolour, .05), 
+    0 -1px 3px rgba($primaryshadowcolour, .2), 
+    0 3px 5px rgba($primaryshadowcolour, .2));
+  $value: ();
+  @for $i from 1 through $depth {
+    $num: $i + px;
+    $hueadjust: $i;
+    @if($lighting == $LIGHTING_FLOOR) {
+      $hueadjust: ($i * 2 - $depth - 5) * 1%;
+    } @elseif($lighting == $LIGHTING_CEIL) {
+      $hueadjust: -($i*2 + $depth - 10) * 1%;
+    } @elseif($lighting == $LIGHTING_FLAT) {
+      $hueadjust: -$depth * 1%;
+    }
+    $colour: adjust-color($primary, $lightness: $hueadjust);
+    $theShadow: 0 $num 0 $colour;
+    $value: append($value, $theShadow, comma);
+  }
+  
+  @for $i from 1 through $shadowsteps {
+    @if($i >= length($predefinedShadows)) {
+      $dist: $i * $shadowincrementer;
+      $value: append($value, 0 $dist $dist rgba($primaryshadowcolour, $shadowopacity));
+    } @else {
+      $value: append($value, nth($predefinedShadows, $i));
+    }
+  }
+  
+  text-shadow: $value;
 }
+
+$primarycolour: rgba(255, 240, 172, 0.2);
+
+.title-background {
+    height: 4em;
+    max-width: 70em;
+    margin: 0 auto;
+    border-radius: 1em;
+}
+
+.a-title {
+  color: rgb(244, 235, 255)  ;
+  font-family: var(--secondary-font);
+  font-size: 60px;
+  line-height:1em;
+  margin: 0;
+  text-align: center;
+  
+  @include text3d(
+    adjust-color($primarycolour, $lightness: -8%), 
+    $depth: 8, 
+    $primaryshadowcolour: adjust-color($primarycolour, $lightness: -10%, $saturation: +20%),
+    $shadowopacity: .3);
+}
+
+*/

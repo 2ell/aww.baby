@@ -1,10 +1,10 @@
 @import url(https://fonts.bunny.net/css?family=allura:400);
 @import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital@0;1&display=swap');
-
+@import url(https://fonts.bunny.net/css?family=moirai-one:400);
 
 :root {
   --primary-font: 'Inclusive Sans', sans-serif;
-  --secondary-font: 'Allura', handwriting;
+  --secondary-font: 'Moirai One', display;
 }
 
 * {
@@ -38,53 +38,48 @@ article * + * {
   }
 
 
-.nav a, footer a {
-    text-transform: lowercase;
-    text-underline-offset: 0.3em;
-    text-decoration-color: rgba(var(--alt-a), 0.5);
-    color: var(--alt-accent);
-    &:hover {
-        color: var(--sapphire);
-        text-decoration-color: var(--sapphire);
-        text-decoration-thickness: 2px;
-        transition: all 100ms ease-in-out;
-    }
-}
 
 header {
     padding: 0em 1em 1em 1em;
     display: flex;
-    align-content: stretch;
-    align-items: stretch;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
     max-width: 100%;
-    gap: 2em;
 }
 
 .title {
     margin-top: 1em;
-    transform: rotate(-4deg);
+    text-align: center;
+    transform: rotate(-7deg);
 }
 
 .title a {
     color: white;
     text-decoration: none;
-    font-size: 1.5em;
+    font-size: 2.5em;
     font-family: var(--secondary-font);
     padding: 0;
+    margin: 0;
     line-height: fit-content;
-    text-shadow: 2px 2px 3px var(--blue),
-                 3px 3px 5px var(--sapphire),
-                 4px 4px 10px var(--sky);
+    text-shadow: 2px 2px 3px var(--yellow),
+                 3px 3px 5px var(--peach),
+                 4px 4px 10px var(--rosewater);
     border-bottom: 0;
+    hyphenate-character: "";
 }
 
 
 #description {
-    display: none;
+  display: none;
+  margin: 1em 0em 1em 0em;
     padding: 1em;
-    font-size: 0.9em;
+    font-size: 0.8em;
     font-family: 'Inclusive Sans', sans-serif;
     color: var(--surface2);
+    width: 100%;
+    border-radius: 2em;
 }
 
 .nav {
@@ -96,6 +91,9 @@ header {
     margin: 0;
     & ul {
         text-align: right;
+        & li + li {
+          margin-left: 0.5rem;
+        }
     }
 }
 
@@ -107,16 +105,19 @@ nav [aria-current="page"] {
 .content {
     max-width: 40em;
     margin: auto;
-    padding: 2em;
+    padding: 2em 0.5em 2em 0.5em;
+}
+
+.intro {
+  text-align: center;
 }
 
 hr {
     border:0;
     height: 1px;
     background-color: var(--surface2);
-    margin: 2em;
+    margin: 2em 0 2em 0;
 }
-
 
 
 .pagination {
@@ -124,8 +125,8 @@ hr {
 }
 
 body > footer div {
-    border-top: 1px solid var(--blue);
-    padding-top: 0.5em;
+    border-top: 1px solid var(--surface0);
+    padding: 2em 0 1em 0;
     font-size: 0.9em;
     color: var(--surface0);
   }

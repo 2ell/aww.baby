@@ -1,20 +1,45 @@
 
 <div class="post-list">
+
+
 {% for post in collections.blog | reverse %}
 
 <hr>
-<div class="{{ post.data.type }}">
-    <img src="{{ post.data.photo }}" class="card__image"/>
-    <div class="card__content">
+
+<!--indicate type of post (flexbox) -->
+<div class="{{ post.data.type }}"> 
+
+
+  <!-- timestamp for photo posts -->
+<div class="card__photodate"> 
+    <time span>{{ post.date | postDate }}</time>
+</div>
+
+  <!-- image container ( > flexbox) -->
+<div class="card__imageContainer">
+      <a href="{{ post.url }}"> 
+          <img src="{{ post.data.photo }}" class="card__image"/>
+      </a>
+</div>
+
+  <!-- content container ( > flexbox) -->
+<div class="card__content">
+
+    <!-- post timestamp -->
       <div class="card__date">
         <time span>{{ post.date | postDate }}</time>
     </div>
-      <a href="{{ post.url }}"><span class="card__title">{{ post.data.title }}</span></a>
-    </div>
-    <div class="card__photodate">
-    <time span>{{ post.date | postDate }}</time>
-    </div>
-    <div class="card__caption"><a href="{{ post.url }}">{{ post.data.caption }}</a></div>
+        <!-- post title -->
+      <a href="{{ post.url }}">
+        <span class="card__title">{{ post.data.title }}</span>
+      </a>
+        <!-- post caption -->
+    <span class="card__caption"><a href="{{ post.url }}">{{ post.data.caption }}</a></span>
   </div>
+
+  
+</div>
+
     {% endfor %}
+
 </div>

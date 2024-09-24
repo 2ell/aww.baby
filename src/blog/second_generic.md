@@ -4,6 +4,7 @@ title: Lemon drops sweet sweet roll macaroon
 tags: blog
 type: card
 photo: https://cdn.some.pics/laurel/65755692a9ffc.jpg
+caption: Artifacts of yesteryear
 ---
 
 ![Flowers and spring foliage gently disrupting the view of a pale, soft sunset over calm lake waters.](https://cdn.some.pics/laurel/65755692a9ffc.jpg)

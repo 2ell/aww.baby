@@ -27,7 +27,7 @@
   --blu: 137, 180, 250;
   --lavender: rgb(180, 190, 245);
   --lav: 180, 190, 254;
-  --text: rgb(231, 236, 255);
+  --txt: rgb(231, 236, 255);
   --tx1: 231, 236, 255;
   --subtext: rgb(166, 173, 200);
   --tx2: 166, 173, 200;
@@ -50,17 +50,54 @@
   --alt-accent: rgb(115, 128, 202);
   --alt-a: 115, 128, 202;
   --highlight: rgba(115, 128, 202, 0.822);
+  --text: rgb(83, 84, 96);
+  --link: rgb(49, 50, 68);
 }
 
 body {
-  color: var(--surface2);
+  color: var(--text);
+  /*    background-image: linear-gradient(180deg, rgb(162, 125, 201), rgb(255, 255, 255));
+      background-size: 100% 100%;
+      background-image: no-repeat;
+  */
 }
 
-nav a {
-  color: var(--surface2);
+nav a, footer a {
+  text-transform: lowercase;
+  text-underline-offset: 0.3em;
+  text-decoration-color: rgba(var(--surface0), 0.5);
+  color: var(--surface0);
 }
-nav a:hover {
-  color: --sapphire;
+nav a:hover, footer a:hover {
+  color: var(--peach);
+  text-decoration-color: var(--peach);
+  text-decoration-thickness: 2px;
+  transition: all 100ms ease-in-out;
+}
+
+.card a {
+  color: var(--link);
+}
+
+article a {
+  color: var(--link);
+  text-transform: lowercase;
+  text-underline-offset: 0.3em;
+  text-decoration-color: rgba(var(--surface0), 0.5);
+  box-decoration-break: clone;
+  background-repeat: no-repeat;
+}
+article a:hover {
+  background: var(--yellow);
+  transition: all 100ms ease-in-out;
+}
+
+img {
+  opacity: 0.9;
+  border-radius: 1em;
+}
+img:hover {
+  opacity: 1;
 }
 
 .card {

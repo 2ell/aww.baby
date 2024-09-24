@@ -2,7 +2,7 @@
 layout: post.njk
 title: a generic blog post
 tags: blog
-type: text
+type: photo
 date: 2024-06-17
 photo: https://cdn.some.pics/laurel/65766b3770711.jpg
 caption: Liquorice sweet roll cupcake
