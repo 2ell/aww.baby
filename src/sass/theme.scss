@@ -53,7 +53,8 @@
 --highlight: rgba(115, 128, 202, 0.822);
 
 --text: rgb(83, 84, 96);
---link: rgb(49, 50, 68);
+--link: rgb(114, 114, 126);
+--link-rgb: 114, 114, 126;
 }
 
 
@@ -68,8 +69,8 @@ body {
 nav a, footer a {
     text-transform: lowercase;
     text-underline-offset: 0.3em;
-    text-decoration-color: rgba(var(--surface0), 0.5);
-    color: var(--surface0);
+    text-decoration-color: rgba(var(--link), 0.5);
+    color: var(--link);
     &:hover {
         color: var(--peach);
         text-decoration-color: var(--peach);
@@ -86,11 +87,11 @@ article a {
     color: var(--link);
     text-transform: lowercase;
     text-underline-offset: 0.3em;
-    text-decoration-color: rgba(var(--surface0), 0.5);
+    text-decoration-color: rgba(var(--pch), 0.5);
     box-decoration-break: clone;
     background-repeat: no-repeat;
     &:hover {
-        background: var(--yellow);
+        background: var(--peach);
         transition: all 100ms ease-in-out;
     }
 }
