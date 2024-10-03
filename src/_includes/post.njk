@@ -3,9 +3,9 @@ layout: base.njk
 ---
 
 <section class="heading">
-  <p class="page-date">{{ page.date | postDate }}</p>
+  <p class="page-date">posted {{ page.date | postDate }}</p>
   <br>
-  <h1>{{ title }}</h1>
+  <h1 class="post__title">{{ title }}</h1>
 </section>
 <main>
   <article>

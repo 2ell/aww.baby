@@ -63,13 +63,13 @@ POST LIST CARDS                                    [1]
 /* ──────────────────────────────────── */
 
     @mixin cardTitle {
-        font-size: 2em;
+        font-size: 1.5em;
         color: var(--surface0);
         margin-left: -4px;
 
         @include mediaBig {
             line-height: 1em;
-            font-size: 2.5em;
+            font-size: 1.9em;
             margin-bottom: 2em;
         }
     }
@@ -105,22 +105,6 @@ POST LIST CARDS                       [ CARD ]
         font-family: var(--primary-font);
         display: flex;
         flex-direction: column;
-
-    @include mediaBig {
-        flex-direction: row;
-        align-items: stretch;
-        gap: 1em;
-        padding: 0;
-    }
-    }
-
-    .card-switch {
-        max-width: 100%;
-        padding: 0em;
-        margin: 0.5em 0em 1em 0em;
-        font-family: var(--primary-font);
-        display: flex;
-        flex-direction: column-reverse;
 
     @include mediaBig {
         flex-direction: row;
@@ -186,6 +170,7 @@ POST LIST CARDS                       [ CARD ]
             .card__caption {
                 display: block;
                 margin: 1em 0 0 0;
+                font-size: 0.8em;
             }
 
 
@@ -264,6 +249,18 @@ POST LIST CARDS                      [ PHOTO ]
     }
 
 
+
+
+/*
+┌────────────────────────────────────────┐
+POSTS                                   [4]  
+└────────────────────────────────────────┘
+*/
+
+.post__title {
+    margin-top: 1em;
+    margin-bottom: 0;
+}
 
 
 

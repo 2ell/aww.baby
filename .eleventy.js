@@ -1,3 +1,4 @@
+
 // Plugins
       const lucideIcons = require("@grimlink/eleventy-plugin-lucide-icons");
       const embedSpotify = require("eleventy-plugin-embed-spotify");
@@ -5,6 +6,7 @@
       
 
 module.exports = function(eleventyConfig) {  
+
   eleventyConfig.setBrowserSyncConfig({
 		files: './site/css/**/*.css'
 	});

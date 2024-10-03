@@ -1,9 +1,9 @@
-@import url(https://fonts.bunny.net/css?family=allura:400);
+@import url(https://fonts.bunny.net/css?family=jetbrains-mono:400,400i);
 @import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital@0;1&display=swap');
 @import url(https://fonts.bunny.net/css?family=moirai-one:400);
 
 :root {
-  --primary-font: 'Inclusive Sans', sans-serif;
+  --primary-font: 'JetBrains Mono', monospace;
   --secondary-font: 'Moirai One', display;
 }
 
@@ -15,12 +15,12 @@
 body {
     font-family: var(--primary-font);
     line-height: 1.8em;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 body > * {
     --layout-spacing: max(8vh, 3rem);
-    --max-width: 70ch;
+    --max-width: 200ch;
     width: min(100%, var(--max-width));
     margin-left: auto;
     margin-right: auto;
@@ -34,7 +34,7 @@ main > * + * {
 }
 
 article * + * {
-    margin-top: 1em;
+    margin-top: 0em;
   }
 
 
@@ -52,7 +52,6 @@ header {
 .title {
     margin-top: 1em;
     text-align: center;
-    transform: rotate(-7deg);
 }
 
 .title a {
@@ -72,14 +71,12 @@ header {
 
 
 #description {
-  display: none;
-  margin: 1em 0em 1em 0em;
-    padding: 1em;
-    font-size: 0.8em;
-    font-family: 'Inclusive Sans', sans-serif;
+    margin: 0.2em 0em 1em 0em;
+    font-size: 0.9em;
+    font-family: var(--primary-font);
     color: var(--surface2);
+    text-align: center;
     width: 100%;
-    border-radius: 2em;
 }
 
 .nav {
@@ -106,36 +103,37 @@ nav [aria-current="page"] {
 .content {
     max-width: 40em;
     margin: auto;
-    padding: 2em 0.5em 2em 0.5em;
+    padding: 2em 1em 2em 1em;
+    font-size: 0.9em;
 }
 
 .intro {
   text-align: center;
+  font-size: 0.9em;
 }
 
 hr {
     border:0;
     height: 1px;
-    background-color: var(--surface2);
+    background-color: rgba(var(--pch), 0.4);
     margin: 2em 0 2em 0;
 }
-
 
 .pagination {
     text-align: center;
 }
 
 body > footer div {
-    border-top: 1px solid var(--surface0);
     padding: 2em 0 1em 0;
-    font-size: 0.9em;
+    border-top: 1px solid var(--text);
     color: var(--surface0);
   }
 
 #footer-cen {
-    margin: auto;
+    margin: 0 auto;
     & p {
         text-align: center;
+        font-size: 0.9em;
     }
 }
 
