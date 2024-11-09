@@ -309,10 +309,10 @@ nav ul li a:hover {
   }
 }
 
-header .nav ul {
+nav ul {
   text-align: right;
 }
-header .nav ul li + li {
+nav ul li + li {
   margin-left: 0rem;
 }
 
