@@ -87,6 +87,7 @@ header {
         flex-wrap: wrap;
         gap: 0.1em;
         @include horizontal-list();
+        @include reset-list();
         & li {
             font-size: 0.9em;
         & a {
