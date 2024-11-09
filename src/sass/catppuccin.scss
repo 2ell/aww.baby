@@ -101,7 +101,7 @@ body {
 }
 
 
-nav a, footer a {
+nav li a, footer a {
     text-transform: lowercase;
     text-underline-offset: 0.3em;
     text-decoration-color: rgba(var(--rgb-text), 0.5);

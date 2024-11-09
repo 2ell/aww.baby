@@ -96,13 +96,13 @@ body {
   background-color: var(--base);
 }
 
-nav a, footer a {
+nav li a, footer a {
   text-transform: lowercase;
   text-underline-offset: 0.3em;
   text-decoration-color: rgba(var(--rgb-text), 0.5);
   color: var(--text);
 }
-nav a:hover, footer a:hover {
+nav li a:hover, footer a:hover {
   color: var(--sky);
   text-decoration-color: var(--sky);
   text-decoration-thickness: 2px;
