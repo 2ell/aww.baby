@@ -11,7 +11,7 @@ layout: base.njk
     {{ content | safe }}
 
     <div class="post__date"><span class="post__posted">{{ page.date | postDate }}</span>
-      <span class="permalink">{% lucide "link" %} <a href="{{ post.url }}">Permalink</a></span>
+      <span class="permalink"><span alt="link icon">{% lucide "link" %}</span> <a href="{{ post.url }}">Permalink</a></span>
       </div>
   </article>
 </main>
