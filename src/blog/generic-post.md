@@ -9,6 +9,7 @@ caption: Liquorice sweet roll cupcake
 categories:
     - quotes
     - local
+eleventyExcludeFromCollections: false
 ---
 
 ![Cotton candy sunrise greeting a quiet inner city street at the cusp of fall. Tree branches and traffic poles are seen by their silhouettes against the pastel swirl of the morning sun and sky.](https://cdn.some.pics/laurel/65766b3770711.jpg)

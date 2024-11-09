@@ -3,12 +3,15 @@ layout: base.njk
 ---
 
 <section class="heading">
-  <p class="page-date">posted {{ page.date | postDate }}</p>
-  <br>
+   <br>
   <h1 class="post__title">{{ title }}</h1>
 </section>
 <main>
   <article>
     {{ content | safe }}
+
+    <div class="post__date"><span class="post__posted">{{ page.date | postDate }}</span>
+      <span class="permalink">{% lucide "link" %} <a href="{{ post.url }}">Permalink</a></span>
+      </div>
   </article>
 </main>

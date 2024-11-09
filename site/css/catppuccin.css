@@ -1,0 +1,147 @@
+@media (prefers-color-scheme: light) {
+  :root {
+    --crust: rgb(220, 224, 232);
+    --rgb-crust: 220, 224, 232;
+    --mantle: rgb(230, 233, 239);
+    --rgb-mantle: 230, 223, 239;
+    --base: rgb(239, 241, 245);
+    --text: rgb(76, 79, 105);
+    --subtext1: rgb(92, 95, 119);
+    --subtext0: rgb(108, 111, 133);
+    --overlay2: rgb(124, 127, 147);
+    --overlay1: rgb(140, 143, 161);
+    --overlay0: rgb(156, 160, 176);
+    --surface2: rgb(172, 176, 190);
+    --surface1: rgb(188, 192, 204);
+    --surface0: rgb(204, 208, 218);
+    --rosewater: rgb(220, 138, 120);
+    --flamingo: rgb(221, 120, 120);
+    --pink: rgb(234, 118, 203);
+    --rgb-pink: 234, 118, 203;
+    --mauve: rgb(136, 57, 239);
+    --rgb-mauve: 136, 57, 239;
+    --red: rgb(210, 15, 57);
+    --rgb-red: 210, 15, 57;
+    --maroon: rgb(230, 69, 83);
+    --rgb-maroon: 230, 69, 83;
+    --peach: rgb(254, 100, 11);
+    --rgb-peach: 254, 100, 11;
+    --yellow: rgb(223, 142, 29);
+    --rgb-yellow: 223, 142, 29;
+    --green: rgb(64, 160, 43);
+    --rgb-green: 64, 160, 43;
+    --teal: rgb(23, 146, 153);
+    --rgb-teal: 23, 146, 153;
+    --sky: rgb(4, 165, 229);
+    --rgb-sky: 4, 165, 229;
+    --sapphire: rgb(32, 159, 181);
+    --blue: rgb(30, 102, 245);
+    --lavender: rgb(114, 135, 253);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --rosewater: rgb(245, 224, 220);
+    --rgb-rosewater: 245, 224, 220;
+    --flamingo: rgb(242, 205, 205);
+    --rgb-flamingo: 242, 205, 205;
+    --pink: rgb(245, 194, 231);
+    --rgb-pink: 245, 194, 231;
+    --mauve: rgb(203, 166, 247);
+    --rgb-mauve: 203, 166, 247;
+    --maroon: rgb(235, 160, 172);
+    --rgb-maroon: 235, 160, 172;
+    --red: rgb(243, 139, 168);
+    --rgb-red: 243, 139, 168;
+    --yellow: rgb(249, 226, 175);
+    --rgb-yellow: 249, 226, 175;
+    --peach: rgb(250, 179, 135);
+    --rgb-peach: 250, 179, 135;
+    --sky: rgb(137, 220, 235);
+    --rgb-sky: 137, 220, 235;
+    --teal: rgb(148, 226, 213);
+    --rgb-teal: 148, 226, 213;
+    --green: rgb(166, 227, 161);
+    --rgb-green: 166, 227, 161;
+    --sapphire: rgb(116, 199, 236);
+    --rgb-sapphire: 116, 199, 236;
+    --blue: rgb(116, 199, 236);
+    --rgb-blue: 137, 180, 250;
+    --lavender: rgb(180, 190, 245);
+    --rgb-lavender: 180, 190, 254;
+    --text: rgb(231, 236, 255);
+    --rgb-text: 231, 236, 255;
+    --subtext: rgb(166, 173, 200);
+    --rgb-subtext: 166, 173, 200;
+    --overlay0: rgb(108, 112, 134);
+    --rgb-overlay0: 108, 112, 134;
+    --overlay1: rgb(127, 132, 156);
+    --rgb-overlay1: 127, 132, 156;
+    --surface2: rgb(88, 91, 112);
+    --rgb-surface2: 88, 91, 112;
+    --surface1: rgb(69, 71, 90);
+    --rgb-surface1: 69, 71, 90;
+    --surface0: rgb(49, 50, 68);
+    --rgb-surface0: 49, 50, 68;
+    --base: rgb(30, 30, 46);
+    --rgb-base: 30, 30, 46;
+    --mantle: rgb(24, 24, 37);
+    --rgb-mantle: 24, 24, 37;
+    --crust: rgb(17, 17, 27);
+    --rgb-crust: 17, 17, 27;
+  }
+}
+body {
+  color: var(--text);
+  background-color: var(--base);
+}
+
+nav a, footer a {
+  text-transform: lowercase;
+  text-underline-offset: 0.3em;
+  text-decoration-color: rgba(var(--rgb-text), 0.5);
+  color: var(--text);
+}
+nav a:hover, footer a:hover {
+  color: var(--sky);
+  text-decoration-color: var(--sky);
+  text-decoration-thickness: 2px;
+  transition: all 100ms ease-in-out;
+}
+
+.card a {
+  color: var(--subtext1);
+}
+
+article a {
+  color: var(--text);
+  text-underline-offset: 0.3em;
+  text-decoration-color: rgba(var(--rgb-sky), 0.5);
+  box-decoration-break: clone;
+  background-repeat: no-repeat;
+}
+article a:hover {
+  color: var(--base);
+  background: var(--sky);
+  transition: all 100ms ease-in-out;
+}
+
+/*
+@media (prefers-color-scheme: light) {
+    title a {
+        text-shadow: none;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+.title a {
+    color: white;
+    text-shadow: 
+        0px 0px 1px var(--yellow),
+        1px 1px 3px var(--peach),
+        2px 2px 5px var(--rosewater);
+  }
+}
+  */
+
+/*# sourceMappingURL=catppuccin.css.map */

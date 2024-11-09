@@ -14,13 +14,9 @@
 </head>
 
 <header>
-    <div>
         <h1 class="title"><a href="/"><span>aww baby</span></a></h1>
-        <p id="description"><i>this is currently a wip</i></p>
-    </div>
-    <div>
-        {% include "components/nav.njk" %}
-    </div>
+        <div class="nav">
+        {% include "components/nav.njk" %}</div>
 </header>
 
 <body>
@@ -33,7 +29,7 @@
     <footer>
         <div id="footer-cen">
             <p>made with {% lucide "heart", { "fill": "#F38BA8", "stroke-width": "0", "size": "14px" } %} by laurel</p>
-            <p>built using <a href="https://11ty.dev">11ty</a> | hosted by <a href="https://www.netlify.com">netlify</a>
+            <p>built with <a href="https://11ty.dev">11ty 3.0</a> | deployed via <a href="https://www.netlify.com">Netlify</a>
             </p>
         </div>
     </footer>

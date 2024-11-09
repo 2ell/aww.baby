@@ -4,16 +4,20 @@
 
 {% for post in collections.blog | reverse %}
 
-<hr>
 
 <!--indicate type of post (flexbox) -->
 <div class="{{ post.data.type }}"> 
 
+  <div class="card__heading"> 
+    <!-- set post icons -->
+      <div class="text-icon">{% lucide "text" %}</div>
+      <div class="photo-icon">{% lucide "image" %}</div>
+      <div class="link-icon">{% lucide "link" %}</div>
+      <span><time span>{{ post.date | postDate }}</time>
+  </div>
 
-  <!-- timestamp for photo posts -->
-<div class="card__photodate"> 
-    <time span>{{ post.date | postDate }}</time>
-</div>
+
+  <!-- heading for text posts -->
 
   <!-- image container ( > flexbox) -->
 <div class="card__imageContainer">
@@ -39,7 +43,7 @@
 
   
 </div>
-
+<br>
     {% endfor %}
 
 </div>

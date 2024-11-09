@@ -1,3 +1,82 @@
-.page__title {
-    margin-top: 1em;
-}
+    * {
+        box-sizing: border-box;
+        margin: 0;
+    }
+    
+/*
+┌────────────────────────────────────────┐
+BODY                                    *** 
+└────────────────────────────────────────┘
+*/
+
+    body {
+        font-family: var(--primary-font);
+        line-height: 1.8em;
+        font-size: 1em;
+    }
+  
+    body>* {
+        /*--layout-spacing: max(8vh, 3rem);*/
+        --max-width: 200ch;
+        width: min(100%, var(--max-width));
+        margin-left: auto;
+        margin-right: auto;
+        hyphens: auto;
+    }
+    
+/*
+┌────────────────────────────────────────┐
+SPACING                                 *** 
+└────────────────────────────────────────┘
+*/
+
+    header,
+    main,
+    main>*+* {
+        margin-top: var(--layout-spacing);
+    }
+  
+    article *+* {
+        margin-top: 0em;
+    }
+
+
+    header {
+        padding: 0em 1em 1em 1em;
+        display: flex;
+        flex-direction: row;
+        gap: 2em;
+        max-width: 50em;
+    }
+        
+    .content {
+        max-width: 40em;
+        margin: auto;
+        padding: 2em 1em 2em 1em;
+        font-size: 1em;
+    }
+    
+
+/*
+┌────────────────────────────────────────┐
+TYPOGRAPHY                              *** 
+└────────────────────────────────────────┘
+*/
+
+    .page__title {
+        margin: 1em 0em 1em 0em;
+    }
+
+
+    :is(h1, h2, h3) {
+        line-height: 1.2;
+    }
+
+    :is(h1, h2) {
+        max-width: 40ch;
+    }
+
+    :is(h2, h3):not(:first-child) {
+        margin-top: 2em;
+    }
+

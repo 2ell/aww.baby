@@ -1,6 +1,6 @@
 {% set currentUrl = page.url %}
 
-<nav>
+
   <ul role="list" class="nav">
     <li>
       <a {% if currentUrl === '/' %}aria-current="page"{% endif %} href="/">Home</a>
@@ -16,4 +16,3 @@
     </li>
     {%- endfor %}
   </ul>
-</nav>

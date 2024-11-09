@@ -48,7 +48,7 @@ module.exports = function(eleventyConfig) {
 
 
       eleventyConfig.addPlugin(lucideIcons, {
-        "class": "custom-class",
+        "class": "lucide-1",
         "width": 24,
         "height": 24,
         "stroke": "currentColor",
