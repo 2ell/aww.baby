@@ -78,7 +78,9 @@ header {
         text-align: center;
         width: 100%;
     }
-
+nav {
+    display: none;
+}
     nav ul {
         max-width: fit-content;
         list-style-type: none;
