@@ -214,6 +214,18 @@ nav ul li {
 nav ul li {
   font-size: 0.9em;
 }
+nav ul li a {
+  text-transform: lowercase;
+  text-underline-offset: 0.3em;
+  text-decoration-color: rgba(var(--rgb-text), 0.5);
+  color: var(--text);
+}
+nav ul li a:hover {
+  color: var(--sky);
+  text-decoration-color: var(--sky);
+  text-decoration-thickness: 2px;
+  transition: all 100ms ease-in-out;
+}
 @media (min-width: 590px) {
   nav ul {
     font-size: 1.2em;
