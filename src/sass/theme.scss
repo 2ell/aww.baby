@@ -14,7 +14,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
-    transition: all 0.2s linear;
+    /*transition: background 0.2s linear;*/
   }
 
   [data-theme="light"] {
@@ -131,9 +131,17 @@ body {
         & a {
             color: var(--sky);
             text-decoration: none;
-            font-weight: 700;
+            font-weight: 600;
+            padding-bottom: 0.1rem;
+            border-bottom: 0.1em solid currentColor;
             &:hover {
-              border-bottom: 1px solid currentColor;
+              font-weight: 900;
+              color: var(--blue);
             }
         }
+  }
+
+
+  .li-datetime {
+    background-color: var(--mantle);
   }

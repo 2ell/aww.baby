@@ -18,8 +18,8 @@
         flex-shrink: 0;
         align-self: center;
         flex-wrap: nowrap;
-        padding: 0 0.5em 0 0.5em;
-        background-color: var(--mantle);
+        padding: 0.2em 0.5em 0.3em 0.5em;
+        text-transform: lowercase;
 /*        border: 1px solid var(--text);*/
     }
     & .li-posttitle {
@@ -31,26 +31,36 @@
 .post__header {
     max-width: 60em;
     margin: 0 auto;
-    padding: 0 0 3em 0;
+    padding: 0 1rem 2rem 1rem;
 }
 
 .post__title {
-    margin: 0.5em;
+    text-transform: capitalize;
 }
 
 .post__date {
-    border-top: 1px solid var(--text);
-    margin: 1em 1em 0 1em;
+    font-size: 0.9em;
+    margin: 1em 0 0 0;
+    padding: 1em 0 1em 0;
     justify-content: flex-end;
     gap: 1em;
     display: flex;
+    line-height: 1em;
 }
 
+@media only screen and (max-width: 400px) {
+    .post__date {
+        flex-direction: column;
+        gap: 0em;
+        margin: 0 0.5em 0 0.5em;
+        align-items: flex-end;
+    }
+}
 
 .post__info {
     max-width: 60em;
-    display: none;
     margin: 0 auto;
+    padding: 1em;
 }
 
 hr.spacer {
@@ -61,12 +71,5 @@ hr.spacer {
 .icon-edit svg {
     height: 1em;
     width: 1em;
-}
-
-.edit__date {
-    line-height: 1.2em;
-    & .edit-note {
-        display: block;
-    }
 }
 

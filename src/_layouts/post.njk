@@ -4,21 +4,21 @@ layout: base.njk
 
 <div class="post__header">
 
+    <div class="post__date">
+
+        <span class="post__published">published <strong>{{ page.date | formatDate('MMMM D, YYYY')  }}</strong>
+        </span>
+        <span>
+        {% if edited %}
+        <i>edited {{ page.edited | formatDate('MMM D, YYYY')  }}</span></i>
+        </span>
+        {% endif %}
+    </div>
+
+    <hr class="spacer">
+
 <h1 class="post__title">{{ title }}</h1>
 
-<div class="post__date">
-
-    <span class="post__published">published <strong>{{ page.date | formatDate('MMMM D, YYYY')  }}</strong>
-    </span>
-
-    {% if edited %}
-    <span>
-    <span class="icon-edit">
-        {% icon "lucide:file-pen-line" %} 
-        </span>edited {{ page.edited | formatDate('MMM D, YYYY')  }}
-    </span>
-    {% endif %}
-</div>
 </div>
 
 <div class="post__body">
@@ -32,10 +32,12 @@ layout: base.njk
 <div class="post__info">
 {% if edited %}
 <div class="edit__date">
-    <span class="post__edited">Edited <strong>{{ page.edited | formatDate('MMM D, YYYY')  }}</strong></span>
+    <span class="post__edited">Edit notes:
+        <br>
+        <strong>{{ page.edited | formatDate('MMM D, YYYY')  }}</strong></span>
     {% if editReason %}
         <span class="edit-note">
-            <i>{{ editReason }}</i>
+            <i>- {{ editReason }}</i>
             </span>
     {% endif %}
 </div>

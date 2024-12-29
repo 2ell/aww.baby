@@ -23,7 +23,7 @@ main {
 }
 
 #footer {
-  max-width: 65em;
+  max-width: 68em;
   margin: 0 auto;
 }
 
@@ -43,49 +43,6 @@ img + :is(p) {
   color: var(--subtext);
 }
 
-a.footnote {
-  color: var(--uni-dark);
-  text-decoration: none;
-  background-color: var(--lavender);
-  border-radius: 40%;
-  margin-left: 2px;
-  margin-right: 2px;
-  padding-left: 2px;
-  padding-right: 2px;
-  margin-right: 2px;
-  -webkit-transition: all 2s ease;
-  -moz-transition: all 2s ease;
-  -o-transition: all 2s ease;
-  transition: all 2s ease;
-}
-
-a.footnote span {
-  z-index: -1;
-  opacity: 0;
-  display: none;
-}
-
-a.footnote:hover {
-  border-bottom: 0;
-}
-a.footnote:hover span {
-  font-size: 0.9em;
-  z-index: 1;
-  position: absolute;
-  display: block;
-  opacity: 1;
-  visibility: visible;
-  padding: 0.3em 1em 0.4em;
-  border-bottom: 0px;
-  right: 4ch;
-  left: 20ch;
-  background: var(--lavender);
-  color: var(--uni-dark);
-  box-shadow: 0 0 1em rgba(5, 5, 5, 0.1);
-  border-radius: 3px;
-  pointer-events: none;
-}
-
 body {
   --uni-dark: rgb(28, 28, 41);
   --uni-light: rgb(231, 236, 255);
@@ -102,7 +59,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
-  transition: all 0.2s linear;
+  /*transition: background 0.2s linear;*/
 }
 
 [data-theme=light] {
@@ -215,10 +172,17 @@ body {
 body a {
   color: var(--sky);
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 600;
+  padding-bottom: 0.1rem;
+  border-bottom: 0.1em solid currentColor;
 }
 body a:hover {
-  border-bottom: 1px solid currentColor;
+  font-weight: 900;
+  color: var(--blue);
+}
+
+.li-datetime {
+  background-color: var(--mantle);
 }
 
 .site__header {
@@ -232,13 +196,13 @@ body a:hover {
   padding: 0;
 }
 .site__header .site__title a {
-  padding: 20px;
+  padding: 0.8em;
   text-decoration: none;
   font-weight: 900;
   color: var(--muted);
+  border-bottom: 0;
 }
 .site__header .site__title a:hover {
-  border-bottom: 0;
   text-shadow: none;
 }
 .site__header nav ul {
@@ -329,8 +293,8 @@ footer .icon-heart svg {
   flex-shrink: 0;
   align-self: center;
   flex-wrap: nowrap;
-  padding: 0 0.5em 0 0.5em;
-  background-color: var(--mantle);
+  padding: 0.2em 0.5em 0.3em 0.5em;
+  text-transform: lowercase;
   /*        border: 1px solid var(--text);*/
 }
 .post__collection .li-container .li-posttitle {
@@ -340,25 +304,35 @@ footer .icon-heart svg {
 .post__header {
   max-width: 60em;
   margin: 0 auto;
-  padding: 0 0 3em 0;
+  padding: 0 1rem 2rem 1rem;
 }
 
 .post__title {
-  margin: 0.5em;
+  text-transform: capitalize;
 }
 
 .post__date {
-  border-top: 1px solid var(--text);
-  margin: 1em 1em 0 1em;
+  font-size: 0.9em;
+  margin: 1em 0 0 0;
+  padding: 1em 0 1em 0;
   justify-content: flex-end;
   gap: 1em;
   display: flex;
+  line-height: 1em;
 }
 
+@media only screen and (max-width: 400px) {
+  .post__date {
+    flex-direction: column;
+    gap: 0em;
+    margin: 0 0.5em 0 0.5em;
+    align-items: flex-end;
+  }
+}
 .post__info {
   max-width: 60em;
-  display: none;
   margin: 0 auto;
+  padding: 1em;
 }
 
 hr.spacer {
@@ -369,13 +343,6 @@ hr.spacer {
 .icon-edit svg {
   height: 1em;
   width: 1em;
-}
-
-.edit__date {
-  line-height: 1.2em;
-}
-.edit__date .edit-note {
-  display: block;
 }
 
 * {

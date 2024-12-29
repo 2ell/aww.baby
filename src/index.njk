@@ -9,14 +9,14 @@ eleventyExcludeFromCollections: true
 <!-- post list -->
 <ul class="post__collection" aria-description="List of recent blog posts in reverse-chronological order">
 
-{%- for post in collections.post -%}
+{%- for post in collections.post | reverse -%}
 
   <!-- post list item -->
   <li>
     <div class="li-container">
     <!-- post datestamp -->
      <div class="li-datetime">
-    <span>{{ post.date | formatDate("MMM DD, YYYY") }}</span>
+    <span>{{ post.date | formatDate("MMM DD") }}</span>
      </div>
     <!-- post title -->
      <div class="li-posttitle">
