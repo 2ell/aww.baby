@@ -3,7 +3,7 @@ body {
 }
 
 main {
-  margin: 4em 0 2em 0;
+  margin: 4em 0.5em 2em 0.5em;
   min-height: 60vh;
 }
 
@@ -57,5 +57,5 @@ main {
   .page__info {
     padding: 0;
     font-size: 0.9em;
-    color: var(--overlay0);
+    color: var(--subtext1);
 }
