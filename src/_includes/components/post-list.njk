@@ -1,0 +1,39 @@
+<!-- post list -->
+<ul class="post__collection" aria-description="List of recent blog posts in reverse-chronological order">
+
+    {%- for post in collections.post | reverse -%}
+    
+      <!-- post list item -->
+      <li>
+        <div class="li-container">
+        <!-- post datestamp -->
+         <div class="li-datetime">
+        <span><a href="{{ post.url }}">{{ post.date | formatDate("MMM DD, YYYY") }}</a></span>
+         </div>
+    
+         <!-- post image -->
+         <div class="post__img">
+          {%- if post.data.image -%}
+          <img src="{{ post.data.image }}" alt="{{ imageAlt }}">
+          {%- else -%}{%- endif -%}
+          </div>
+    
+        <!-- post title -->
+         <div class="li-posttitle">
+          {%- if post.data.logTitle -%}
+        <h3>{{ post.data.logTitle }}</h3>
+        {%- else -%}{%- endif -%}
+         </div>
+    
+    
+         {%- if post.data.excerpt -%}
+         <p>{{ post.data.excerpt }}</p>
+         {%- else -%}{%- endif -%}
+    </div>
+      <!-- post list item END-->
+      </li>
+    {%- endfor -%}
+    
+    <!-- post list end -->
+    </ul>
+    

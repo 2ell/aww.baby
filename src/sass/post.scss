@@ -1,14 +1,19 @@
 .post__collection {
     list-style-type: none;
     padding: 0;
-    & li {
-        margin-bottom: 1em;
-    }
     & h2 {
         text-transform: lowercase;
     }
 }
 
+.post__collection .li-container {
+    margin-bottom: 3em;
+    & p {
+        line-height: 2em;
+    }
+}
+
+/*
 .post__collection .li-container {
     display: flex;
     align-items: center;
@@ -20,48 +25,41 @@
         flex-wrap: nowrap;
         padding: 0.2em 0.5em 0.3em 0.5em;
         text-transform: lowercase;
-/*        border: 1px solid var(--text);*/
     }
     & .li-posttitle {
         flex-wrap: wrap;
     }
 }
+*/
 
 
 .post__header {
-    max-width: 60em;
+    max-width: 30em;
     margin: 0 auto;
-    padding: 0 1rem 2rem 1rem;
 }
 
 .post__title {
     text-transform: capitalize;
 }
 
-.post__date {
-    font-size: 0.9em;
-    margin: 1em 0 0 0;
-    padding: 1em 0 1em 0;
-    justify-content: flex-end;
-    gap: 1em;
-    display: flex;
-    line-height: 1em;
-}
-
-@media only screen and (max-width: 400px) {
     .post__date {
+        margin: 1em 0 0 0;
+        display: flex;
         flex-direction: column;
         gap: 0em;
-        margin: 0 0.5em 0 0.5em;
-        align-items: flex-end;
+        align-items: flex-start;
     }
-}
 
-.post__info {
-    max-width: 60em;
-    margin: 0 auto;
-    padding: 1em;
-}
+    .post__published a {
+        color: var(--text);
+        border: 0;
+    }
+
+    .post__edited {
+        color: var(--muted);
+        font-size: 0.9em;
+    }
+
 
 hr.spacer {
     margin-top: 2em;

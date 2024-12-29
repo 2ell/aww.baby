@@ -1,5 +1,8 @@
 footer {
-    font-size: 0.9em;
+    & .contact svg {
+        height: 1em;
+        width: 1em;
+    }
     & .icon-heart svg {
         fill: var(--pink);
         stroke: none;
@@ -9,35 +12,51 @@ footer {
     }
 
 .foot-bar {
-    background-color: var(--crust);
+    padding: 1em 0 0 0;
+    margin: 0;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    padding: 1em 1em 0 1em;
-}
-
-.foot-1 {
     & ul {
         list-style-type: none;
         margin: 0;
-        padding-left: 0;
+        padding: 0;
+}
+}
+
+.foot-1 {
+    text-align: center;
+& ul li {
+    display: inline-block;
+    margin-right: 0.7rem;
+    text-transform: lowercase;
     & a {
-        text-transform: lowercase;
+        border: 0;
+        color: var(--text);
+        &:hover {
+            color: var(--blue);
+        }
     }
-    }
+}
 }
 
 .foot-2 {
-    display: none;
-    padding-bottom: 1em;
-    align-self: flex-end;
-}
-
-.foot-3 {
-    text-align: right;
+    font-size: 0.9em;
+    text-align: center;
+    line-height: 1em;
     & p:first-child {
-        margin-top: 7em;
+        margin-top: 2em;
+        padding: 0;
     }
-    & p:last-child {
-        display: none;
+    & ul {
+        margin: 0;
+    & li {
+        display: inline-block;
+        margin-left: 0.5em;
+        & a {
+            color: var(--text);
+            border: 0;
+        }
     }
+}
 }

@@ -1,6 +1,7 @@
 import filters from './src/_config/filters.js';
 import pluginIcons from 'eleventy-plugin-icons';
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
+import eleventyPluginExcerpt from 'eleventy-plugin-excerpt';
 
 export default function(eleventyConfig) {
 	// Order matters, put this at the top of your configuration file.
@@ -10,6 +11,12 @@ export default function(eleventyConfig) {
   eleventyConfig.setOutputDirectory("dist");
 
   eleventyConfig.addGlobalData("myName", "Laurel");
+
+  eleventyConfig.setFrontMatterParsingOptions({
+    excerpt: true,
+    // Optional, default is "---"
+    excerpt_separator: "<!-- excerpt -->",
+  });
 
   // Emulate passthrough copy during `--serve`
   eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
@@ -33,11 +40,12 @@ export default function(eleventyConfig) {
 
   //---------------------- Plugins
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  eleventyConfig.addPlugin(eleventyPluginExcerpt);
   eleventyConfig.addPlugin(pluginIcons, {
     sources: [
       { name: 'lucide', path: 'node_modules/lucide-static/icons' },
-      { name: 'feather', path: 'node_modules/feather-icons/dist/icons' }
-    ],
+      { name: 'feather', path: 'node_modules/feather-icons/dist/icons' },
+      ],
     icon: {
       shortcode: 'icon',
       delimiter: ':',

@@ -3,29 +3,25 @@ layout: base.njk
 ---
 
 <div class="post__header">
-
     <div class="post__date">
 
-        <span class="post__published">published <strong>{{ page.date | formatDate('MMMM D, YYYY')  }}</strong>
+        <span class="post__published">
+            <a href="{{ post.url }}">{{ page.date | formatDate('MMM D')  }}</a>
         </span>
-        <span>
+        <span class="post__edited">
         {% if edited %}
-        <i>edited {{ page.edited | formatDate('MMM D, YYYY')  }}</span></i>
+        (edited {{ page.edited | formatDate('MMM D, YYYY')  }})</span></i>
         </span>
         {% endif %}
     </div>
-
-    <hr class="spacer">
-
-<h1 class="post__title">{{ title }}</h1>
-
+<h2 class="post__title">{{ title }}</h2>
 </div>
 
 <div class="post__body">
 <article>
     {{ content | safe }}
 </article>
-</div>
+
 
 <hr class="spacer">
 
@@ -42,4 +38,5 @@ layout: base.njk
     {% endif %}
 </div>
     {% endif %}
+</div>
 </div>

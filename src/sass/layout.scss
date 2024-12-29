@@ -1,29 +1,32 @@
 body {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0;
     line-height: 2em;
 }
 
 main {
-  margin: 5em 0 2em 0;
+  margin: 4em 0 2em 0;
   min-height: 60vh;
 }
 
-.body-content {
-  max-width: 60em;
+.post__body {
+  max-width: 30em;
   margin: 0 auto;
-  padding: 0 1em;
+}
+
+.body-content,
+.body-content-sm {
+  max-width: 30em;
+  margin: 0 auto;
 }
 
 #header {
-  max-width: 65em;
+  max-width: 60em;
   margin: 0 auto;
 }
 
 #footer {
-  max-width: 68em;
+  max-width: 35em;
   margin: 0 auto;
+  border-top: 1px solid var(--surface0);
 }
 
   img {
@@ -35,9 +38,24 @@ main {
     opacity: 0.7;
   }
 
-  img + :is(p) {
+  img + :is(.caption) {
+  font-size: 0.9em;
     margin-top: 0em;
     text-align: center;
     font-style: italic;
-    color: var(--subtext);
+    color: var(--muted);
   }
+
+
+  .page__header {
+    max-width: 30em;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .post__info,
+  .page__info {
+    padding: 0;
+    font-size: 0.9em;
+    color: var(--overlay0);
+}

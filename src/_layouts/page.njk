@@ -2,16 +2,19 @@
 layout: base.njk
 ---
 
-<div class="post__header">
+<div class="page__header">
 <h1>{{ title }}</h1>
-<span>updated 
-    {{ page.modified | formatDate('MMM D, YYYY - hh:mm a') }} 
-</span>
 </div>
 
 <div class="post__body">
 <article>
     {{ content | safe }}
 </article>
+<hr class="spacer">
+<div class="page__info">
+<span><strong>updated</strong> 
+    {{ page.modified | formatDate('MMM D, YYYY') }} 
+</span>
+</div>
 </div>
 
