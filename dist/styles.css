@@ -20,7 +20,8 @@ main {
 }
 
 #header {
-  max-width: 60em;
+  padding: 0.3rem;
+  max-width: 50em;
   margin: 0 auto;
 }
 
@@ -158,8 +159,8 @@ body {
   --rgb-lavender: 180, 190, 254;
   --text: rgb(205, 214, 244);
   --rgb-text: 205, 214, 244;
-  --subtext: rgb(166, 173, 200);
-  --rgb-subtext: 166, 173, 200;
+  --subtext1: rgb(166, 173, 200);
+  --rgb-subtext1: 166, 173, 200;
   --overlay0: rgb(108, 112, 134);
   --rgb-overlay0: 108, 112, 134;
   --overlay1: rgb(127, 132, 156);
@@ -211,7 +212,8 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 1em;
+  padding: 0;
+  margin: 0;
 }
 .site__header .site__title, .site__header .header__back {
   margin: 0;
@@ -221,12 +223,17 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
   text-decoration: none;
-  font-weight: 300;
+  font-weight: 500;
   color: var(--subtext1);
   border-bottom: 0;
 }
 .site__header .site__title a:hover, .site__header .header__back a:hover {
   text-shadow: none;
+  color: var(--text);
+  font-weight: 900;
+}
+.site__header .site__title a svg, .site__header .header__back a svg {
+  margin: 0.2em;
 }
 .site__header nav ul {
   margin: 0;
@@ -243,6 +250,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .icon-moon, .icon-sun {
   color: var(--muted);
+  margin: 0.2em;
 }
 
 .icon-moon:hover {
