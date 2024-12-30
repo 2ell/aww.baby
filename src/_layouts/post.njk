@@ -6,7 +6,7 @@ layout: base.njk
     <div class="post__date">
 
         <span class="post__published">
-            <a href="{{ post.url }}">{{ page.date | formatDate('MMM D')  }}</a>
+            <a href="{{ post.url }}">{{ page.date | formatDate('MMM D, YYYY')  }}</a>
         </span>
         <span class="post__edited">
         {% if edited %}
