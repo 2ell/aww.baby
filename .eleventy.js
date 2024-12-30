@@ -26,8 +26,8 @@ export default function(eleventyConfig) {
 
 	// Copy any .jpg file to `_site`, via Glob pattern
 	// Keeps the same directory structure.
-	eleventyConfig.addPassthroughCopy("**/*.jpg");
-  eleventyConfig.addPassthroughCopy("**/*.svg");
+	eleventyConfig.addPassthroughCopy("src/**/*.jpg");
+  eleventyConfig.addPassthroughCopy("src/**/*.svg");
 
   // Layout aliasing
   eleventyConfig.addLayoutAlias("post", "post.njk");
