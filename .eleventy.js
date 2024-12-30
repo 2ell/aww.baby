@@ -37,6 +37,23 @@ export default function(eleventyConfig) {
   eleventyConfig.addFilter('toIsoString', filters.toISOString);
   eleventyConfig.addFilter('formatDate', filters.formatDate);
   eleventyConfig.addFilter('markdownFormat', filters.markdownFormat);
+
+  eleventyConfig.addCollection("postsByYear", (collection) => {
+    const posts = collection.getFilteredByTag('post').reverse();
+    const years = posts.map(post => post.date.getFullYear());
+    const uniqueYears = [...new Set(years)];
+  
+    const postsByYear = uniqueYears.reduce((prev, year) => {
+      const filteredPosts = posts.filter(post => post.date.getFullYear() === year);
+  
+      return [
+        ...prev,
+        [year, filteredPosts]
+      ]
+    }, []);
+  
+    return postsByYear;
+  });
   
 
   //---------------------- Plugins

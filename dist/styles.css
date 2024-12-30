@@ -54,9 +54,15 @@ img + :is(.caption) {
   text-align: center;
 }
 
-.post__info,
-.page__info {
+.post__info {
   padding: 0;
+  font-size: 0.9em;
+  color: var(--subtext1);
+}
+
+.page__info {
+  display: none;
+  text-align: right;
   font-size: 0.9em;
   color: var(--subtext1);
 }
@@ -183,7 +189,7 @@ body {
   color: var(--text);
 }
 body a {
-  color: var(--blue);
+  color: var(--text);
   text-decoration: none;
   font-weight: 800;
   padding-bottom: 0.1rem;
@@ -191,6 +197,7 @@ body a {
 }
 body a:hover {
   color: var(--blue);
+  border-bottom: 0.2em solid currentColor;
 }
 
 .li-datetime a {
@@ -221,6 +228,9 @@ h1, h2, h3, h4, h5, h6 {
   border: 0;
   color: var(--muted);
 }
+.header__back a:hover {
+  border: 0;
+}
 
 .site__title {
   margin: 0;
@@ -236,6 +246,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .site__title a:hover {
   text-shadow: none;
+  border-bottom: 0;
 }
 
 @media only screen and (max-width: 600px) {
@@ -437,6 +448,22 @@ hr.spacer {
 .icon-edit svg {
   height: 1em;
   width: 1em;
+}
+
+.post__archive {
+  list-style-type: none;
+}
+.post__archive li {
+  margin-bottom: 1em;
+  display: flex;
+  gap: 1em;
+}
+.post__archive li span:first-child {
+  flex-shrink: 0;
+  font-size: 0.9em;
+}
+.post__archive li a {
+  text-transform: lowercase;
 }
 
 * {

@@ -71,3 +71,20 @@ hr.spacer {
     width: 1em;
 }
 
+
+
+.post__archive {
+    list-style-type: none;
+    & li {
+        margin-bottom: 1em;
+        display: flex;
+        gap: 1em;
+        & span:first-child {
+            flex-shrink: 0;
+            font-size: 0.9em;
+        }
+        & a {
+            text-transform: lowercase;
+        }
+    }
+}

@@ -15,6 +15,9 @@
       padding: 0;
       border: 0;
       color: var(--muted);
+      &:hover {
+        border: 0;
+      }
 }
 }
 
@@ -30,6 +33,7 @@
         border-bottom: 0;
       &:hover {
         text-shadow: none;
+        border-bottom: 0;
       }
       }
     }

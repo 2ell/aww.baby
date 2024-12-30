@@ -126,13 +126,14 @@ body {
     background-color: var(--crust);
     color: var(--text);
         & a {
-            color: var(--blue);
+            color: var(--text);
             text-decoration: none;
             font-weight: 800;
             padding-bottom: 0.1rem;
             border-bottom: 0.1em solid currentColor;
             &:hover {
               color: var(--blue);
+              border-bottom: 0.2em solid currentColor;
             }
         }
   }

@@ -1,0 +1,19 @@
+---
+layout: page
+title: Archive
+permalink: "/{{ title | slugify }}/"
+eleventyNavigation:
+    title: Archive
+    order: 4
+---
+
+{% for year, yearPosts in collections.postsByYear %}
+  <h2>{{ year }}</h2>
+  <ul class="post__archive">
+    {% for post in yearPosts | reverse %}
+      <li>
+        <span>{{ post.date | formatDate("MMM DD, YYYY") }}</span>
+        <span><a href="{{ post.url }}">{{ post.data.title }}</a></span></li>
+    {% endfor %}
+  </ul>
+{% endfor %}
