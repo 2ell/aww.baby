@@ -448,6 +448,7 @@ h1 {
   font-weight: 900;
   font-family: Bhineka Script;
   text-transform: lowercase;
+  letter-spacing: -0.12rem;
   font-size: 3em;
 }
 
