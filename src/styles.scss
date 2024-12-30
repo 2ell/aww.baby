@@ -4,11 +4,17 @@
 @use "sass/footer.scss";
 @use "sass/post.scss";
 
-@import url(https://fonts.bunny.net/css?family=ubuntu:400);
-@import url(https://fonts.bunny.net/css?family=bayon:400);
 
+@import url(https://2ell.b-cdn.net/bhineka-script/bhineka-script.css);
 
 * {
   font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
   letter-spacing: 0.03rem;
+}
+
+h1 {
+  font-weight: 900;
+  font-family: Bhineka Script;
+  text-transform: lowercase;
+  font-size: 3em;
 }

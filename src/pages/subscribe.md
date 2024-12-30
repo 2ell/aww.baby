@@ -3,7 +3,7 @@ layout: page
 title: Subscribe
 permalink: "/{{ title | slugify }}/"
 eleventyNavigation:
-    title: subscribe
+    title: Subscribe
     order: 3
 eleventyExcludeFromCollections: true
 ---

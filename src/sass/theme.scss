@@ -4,10 +4,7 @@ body {
     --g1: linear-gradient(90deg, rgba(var(--rgb-yellow), 1) 0%, rgba(var(--rgb-lavender), 1) 25%, rgba(var(--rgb-teal), 1) 50%, rgba(var(--rgb-pink), 1) 75%), rgba(var(--rgb-peach), 1) 100%;
 }
 
-#dark-light-toggle button {
-    background-color: transparent;
-    border: 0;
-}
+
 
 body {
     display: flex;
@@ -131,11 +128,10 @@ body {
         & a {
             color: var(--blue);
             text-decoration: none;
-            font-weight: 400;
+            font-weight: 800;
             padding-bottom: 0.1rem;
             border-bottom: 0.1em solid currentColor;
             &:hover {
-              font-weight: 900;
               color: var(--blue);
             }
         }

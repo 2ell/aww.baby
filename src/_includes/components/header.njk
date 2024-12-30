@@ -1,11 +1,13 @@
 <header><div id="header">
   
+ 
   <div class="site__header">
 
     <!-- title -->
-      <img class="light" src="/_assets/awwbb_light.svg">
-      <img class="dark" src="/_assets/awwbb_dark.svg">
-  
+    <div class="site__title">
+      <a href="/"><img class="awwbaby light" src="/_assets/awwbb_light.svg"></a>
+      <a href="/"></a><img class="awwbaby dark" src="/_assets/awwbb_dark.svg"></a>
+  </div>
       <!-- navigation -->
   <nav aria-labelledby="navigation">
     {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}

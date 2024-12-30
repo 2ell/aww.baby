@@ -1,5 +1,4 @@
-@import url(https://fonts.bunny.net/css?family=ubuntu:400);
-@import url(https://fonts.bunny.net/css?family=bayon:400);
+@import url(https://2ell.b-cdn.net/bhineka-script/bhineka-script.css);
 body {
   line-height: 2em;
 }
@@ -66,11 +65,6 @@ body {
   --uni-dark: rgb(28, 28, 41);
   --uni-light: rgb(231, 236, 255);
   --g1: linear-gradient(90deg, rgba(var(--rgb-yellow), 1) 0%, rgba(var(--rgb-lavender), 1) 25%, rgba(var(--rgb-teal), 1) 50%, rgba(var(--rgb-pink), 1) 75%), rgba(var(--rgb-peach), 1) 100%;
-}
-
-#dark-light-toggle button {
-  background-color: transparent;
-  border: 0;
 }
 
 body {
@@ -191,12 +185,11 @@ body {
 body a {
   color: var(--blue);
   text-decoration: none;
-  font-weight: 400;
+  font-weight: 800;
   padding-bottom: 0.1rem;
   border-bottom: 0.1em solid currentColor;
 }
 body a:hover {
-  font-weight: 900;
   color: var(--blue);
 }
 
@@ -212,46 +205,89 @@ h1, h2, h3, h4, h5, h6 {
 .site__header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: left;
+  gap: 1rem;
   padding: 0;
   margin: 0;
 }
-.site__header .header__back a {
+
+.header__back {
+  min-width: 50px;
+  padding: 1em 0 0 1em;
+}
+.header__back a {
   margin: 0;
-  padding: 0.5em;
+  padding: 0;
   border: 0;
-  color: var(--text);
+  color: var(--muted);
 }
-.site__header .site__title {
+
+.site__title {
   margin: 0;
   padding: 0;
 }
-.site__header .site__title a {
-  margin: 0;
+.site__title a {
+  margin: 0 0 0 2em;
   padding: 0;
   text-decoration: none;
   font-weight: 900;
   font-size: 0.9em;
-  text-align: center;
   border-bottom: 0;
 }
-.site__header .site__title a:hover {
+.site__title a:hover {
   text-shadow: none;
 }
-.site__header .site__title a svg {
-  margin: 0.2em;
+
+@media only screen and (max-width: 600px) {
+  .site__title a {
+    margin: 0 0 0 0.3em;
+  }
+  .header__back {
+    padding: 0.5em 0 0 0;
+  }
+  .site__header #dark-light-toggle button {
+    margin: 0.2em;
+  }
 }
-.site__header nav ul {
+nav {
+  display: none;
+  text-align: left;
+  justify-self: left;
+  align-content: flex-end;
+  align-self: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+nav ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
-.site__header nav ul li a {
-  color: var(--blue);
-  text-decoration: none;
+nav ul li {
+  display: inline-block;
+  margin-right: 0.5rem;
 }
-.site__header nav ul li a:hover, .site__header nav ul li a:active {
-  border-bottom: 1px solid currentColor;
+nav ul li a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 0;
+  text-transform: lowercase;
+}
+
+#dark-light-toggle {
+  align-self: flex-start;
+  justify-self: flex-end;
+  position: absolute;
+  top: 1;
+  right: 0;
+}
+#dark-light-toggle button {
+  background-color: transparent;
+  margin: 0.2em 1em 0.2em 1em;
+  border: 0;
+}
+#dark-light-toggle button:hover {
+  cursor: pointer;
 }
 
 .icon-moon, .icon-sun {
@@ -267,26 +303,9 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--peach);
 }
 
-.awwbaby {
-  max-width: 50%;
-}
-
-.stroke {
-  color: var(--crust);
-  letter-spacing: -0.06em;
-  font-family: monospace;
-  text-shadow: -1px -1px 0 var(--muted), 0 -1px 0 var(--muted), 1px -1px 0 var(--muted), 1px 0 0 var(--muted), 1px 1px 0 var(--muted), 0 1px 0 var(--muted), -1px 1px 0 var(--muted), -1px 0 0 var(--muted);
-}
-
-[data-theme=light] .stroke:hover {
-  background-color: rgba(var(--rgb-lavender), 0.3);
-  color: var(--crust);
-  text-shadow: -1px -1px 0 var(--text), 0 -1px 0 var(--text), 1px -1px 0 var(--text), 1px 0 0 var(--text), 1px 1px 0 var(--text), 0 1px 0 var(--text), -1px 1px 0 var(--text), -1px 0 0 var(--text);
-}
-
-[data-theme=dark] .stroke:hover {
-  color: var(--crust);
-  text-shadow: -1px -1px 0 var(--text), 0 -1px 0 var(--text), 1px -1px 0 var(--text), 1px 0 0 var(--text), 1px 1px 0 var(--text), 0 1px 0 var(--text), -1px 1px 0 var(--text), -1px 0 0 var(--text);
+.awwbaby:hover {
+  opacity: 0.7;
+  cursor: pointer;
 }
 
 footer .contact svg {
@@ -423,6 +442,13 @@ hr.spacer {
 * {
   font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
   letter-spacing: 0.03rem;
+}
+
+h1 {
+  font-weight: 900;
+  font-family: Bhineka Script;
+  text-transform: lowercase;
+  font-size: 3em;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -3,14 +3,10 @@
   <div class="site__header">
   
   <!-- title -->
-  <h2 class="header__back">
+   <div class="header__back">
     <a href="javascript:history.back()">{% icon "lucide:arrow-left" %}</a>
-  </h2>
+</div>
 
-  <!-- navigation -->
-  <nav aria-labelledby="navigation">
-    {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
-  </nav>
 
   <!-- light/dark toggle -->
   <div id="dark-light-toggle">
