@@ -5,21 +5,25 @@
     padding: 0;
     margin: 0;
 
-    & .site__title,
-    & .header__back {
+    & .header__back a {
+      margin: 0;
+      padding: 0.5em;
+      border: 0;
+      color: var(--text);
+    }
+    & .site__title {
       margin: 0;
       padding: 0;
       & a {
         margin: 0;
         padding: 0;
         text-decoration: none;
-        font-weight: 500;
-        color: var(--subtext1);
+        font-weight: 900;
+        font-size: 0.9em;
+        text-align: center;
         border-bottom: 0;
       &:hover {
         text-shadow: none;
-        color: var(--text);
-        font-weight: 900;
       }
       & svg {
         margin: 0.2em;
@@ -33,7 +37,7 @@
         & li a {
             color: var(--blue);
             text-decoration: none;
-            &:hover,:active {
+            &:hover,&:active {
                 border-bottom: 1px solid currentColor;
             }
         }
@@ -52,3 +56,33 @@
 .icon-sun:hover {
   color: var(--peach);
 }
+
+.awwbaby {
+  max-width: 50%;
+}
+
+.stroke {
+  color: var(--crust);
+  letter-spacing: -0.06em;
+  font-family: monospace;
+  text-shadow: -1px -1px 0 var(--muted), 0 -1px 0 var(--muted),
+  1px -1px 0 var(--muted), 1px 0 0 var(--muted),
+  1px 1px 0 var(--muted), 0 1px 0 var(--muted),
+  -1px 1px 0 var(--muted), -1px 0 0 var(--muted);
+}
+[data-theme="light"] .stroke:hover {
+  background-color: rgba(var(--rgb-lavender), 0.3);
+  color: var(--crust);
+  text-shadow: -1px -1px 0 var(--text), 0 -1px 0 var(--text),
+  1px -1px 0 var(--text), 1px 0 0 var(--text),
+  1px 1px 0 var(--text), 0 1px 0 var(--text),
+  -1px 1px 0 var(--text), -1px 0 0 var(--text);
+}
+[data-theme="dark"] .stroke:hover {
+  color: var(--crust);
+  text-shadow: -1px -1px 0 var(--text), 0 -1px 0 var(--text),
+  1px -1px 0 var(--text), 1px 0 0 var(--text),
+  1px 1px 0 var(--text), 0 1px 0 var(--text),
+  -1px 1px 0 var(--text), -1px 0 0 var(--text);
+}
+  

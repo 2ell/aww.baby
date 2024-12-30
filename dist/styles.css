@@ -1,4 +1,5 @@
 @import url(https://fonts.bunny.net/css?family=ubuntu:400);
+@import url(https://fonts.bunny.net/css?family=bayon:400);
 body {
   line-height: 2em;
 }
@@ -215,24 +216,29 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   margin: 0;
 }
-.site__header .site__title, .site__header .header__back {
+.site__header .header__back a {
+  margin: 0;
+  padding: 0.5em;
+  border: 0;
+  color: var(--text);
+}
+.site__header .site__title {
   margin: 0;
   padding: 0;
 }
-.site__header .site__title a, .site__header .header__back a {
+.site__header .site__title a {
   margin: 0;
   padding: 0;
   text-decoration: none;
-  font-weight: 500;
-  color: var(--subtext1);
+  font-weight: 900;
+  font-size: 0.9em;
+  text-align: center;
   border-bottom: 0;
 }
-.site__header .site__title a:hover, .site__header .header__back a:hover {
+.site__header .site__title a:hover {
   text-shadow: none;
-  color: var(--text);
-  font-weight: 900;
 }
-.site__header .site__title a svg, .site__header .header__back a svg {
+.site__header .site__title a svg {
   margin: 0.2em;
 }
 .site__header nav ul {
@@ -244,7 +250,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--blue);
   text-decoration: none;
 }
-.site__header nav ul li a:hover, .site__header nav ul li a :active {
+.site__header nav ul li a:hover, .site__header nav ul li a:active {
   border-bottom: 1px solid currentColor;
 }
 
@@ -259,6 +265,28 @@ h1, h2, h3, h4, h5, h6 {
 
 .icon-sun:hover {
   color: var(--peach);
+}
+
+.awwbaby {
+  max-width: 50%;
+}
+
+.stroke {
+  color: var(--crust);
+  letter-spacing: -0.06em;
+  font-family: monospace;
+  text-shadow: -1px -1px 0 var(--muted), 0 -1px 0 var(--muted), 1px -1px 0 var(--muted), 1px 0 0 var(--muted), 1px 1px 0 var(--muted), 0 1px 0 var(--muted), -1px 1px 0 var(--muted), -1px 0 0 var(--muted);
+}
+
+[data-theme=light] .stroke:hover {
+  background-color: rgba(var(--rgb-lavender), 0.3);
+  color: var(--crust);
+  text-shadow: -1px -1px 0 var(--text), 0 -1px 0 var(--text), 1px -1px 0 var(--text), 1px 0 0 var(--text), 1px 1px 0 var(--text), 0 1px 0 var(--text), -1px 1px 0 var(--text), -1px 0 0 var(--text);
+}
+
+[data-theme=dark] .stroke:hover {
+  color: var(--crust);
+  text-shadow: -1px -1px 0 var(--text), 0 -1px 0 var(--text), 1px -1px 0 var(--text), 1px 0 0 var(--text), 1px 1px 0 var(--text), 0 1px 0 var(--text), -1px 1px 0 var(--text), -1px 0 0 var(--text);
 }
 
 footer .contact svg {

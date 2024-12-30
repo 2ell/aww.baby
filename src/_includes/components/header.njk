@@ -1,13 +1,12 @@
 <header><div id="header">
   
   <div class="site__header">
-  
-  <!-- title -->
-  <h2 class="site__title">
-    <a href="/">{{ lore.name }}</a>
-  </h2>
 
-  <!-- navigation -->
+    <!-- title -->
+      <img class="light" src="/_assets/awwbb_light.svg">
+      <img class="dark" src="/_assets/awwbb_dark.svg">
+  
+      <!-- navigation -->
   <nav aria-labelledby="navigation">
     {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
   </nav>
