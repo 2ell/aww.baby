@@ -20,9 +20,12 @@ main {
 }
 
 #header {
-  padding: 0.3rem;
-  max-width: 50em;
+  padding: 0;
+  max-width: 60em;
   margin: 0 auto;
+}
+#header img {
+  margin: 0;
 }
 
 #footer {
@@ -57,6 +60,7 @@ img + :is(.caption) {
 .post__info {
   padding: 0;
   font-size: 0.9em;
+  line-height: 1em;
   color: var(--subtext1);
 }
 
@@ -213,15 +217,15 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: row;
   justify-content: left;
-  gap: 1rem;
+  gap: 0.2rem;
   padding: 0;
   margin: 0;
-  min-height: 100px;
+  min-height: 150px;
 }
 
 .header__back {
   min-width: 50px;
-  padding: 1em 0 0 1em;
+  padding: 20px 0 0 20px;
 }
 .header__back a {
   margin: 0;
@@ -234,8 +238,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .site__title {
-  margin: 0;
-  padding: 0 0 0 -20px;
+  margin: 10px 0 0 10px;
+  padding: 0;
 }
 .site__title a {
   margin: 0;
@@ -255,7 +259,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
   }
   .header__back {
-    padding: 0.5em 0 0 0;
+    padding: 10px 10px 0 10px;
   }
   .site__header #dark-light-toggle button {
     margin: 0.2em;
@@ -263,24 +267,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 nav {
   display: none;
-  text-align: left;
-  justify-self: left;
-  align-content: flex-end;
-  align-self: center;
+  list-style-type: none;
   padding-left: 2rem;
-  padding-right: 2rem;
+  line-height: 1.4em;
 }
 nav ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  gap: 0.1rem;
+  display: flex;
+  flex-direction: column;
 }
-nav ul li {
-  display: inline-block;
-  margin-right: 0.5rem;
-}
-nav ul li a {
-  color: var(--text);
+nav ul a {
+  font-size: 0.9em;
+  color: var(--muted);
   text-decoration: none;
   border-bottom: 0;
   text-transform: lowercase;
@@ -295,7 +296,7 @@ nav ul li a {
 }
 #dark-light-toggle button {
   background-color: transparent;
-  margin: 0.2em 1em 0.2em 1em;
+  margin: 0.2em 0em 0.2em 1em;
   border: 0;
 }
 #dark-light-toggle button:hover {
@@ -421,6 +422,8 @@ footer .icon-heart svg {
 
 .post__title {
   text-transform: capitalize;
+  font-size: 2em;
+  font-weight: 800;
 }
 
 .post__date {
@@ -429,6 +432,7 @@ footer .icon-heart svg {
   flex-direction: column;
   gap: 0em;
   align-items: flex-start;
+  line-height: 1.2em;
 }
 
 .post__published a {
@@ -455,7 +459,7 @@ hr.spacer {
   list-style-type: none;
 }
 .post__archive li {
-  margin-bottom: 1em;
+  margin: 0.2em 0.2em 1em 0em;
   display: flex;
   gap: 1em;
 }

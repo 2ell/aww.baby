@@ -19,9 +19,12 @@ main {
 }
 
 #header {
-  padding: 0.3rem;
-  max-width: 50em;
+  padding: 0;
+  max-width: 60em;
   margin: 0 auto;
+  & img {
+    margin: 0;
+  }
 }
 
 #footer {
@@ -57,6 +60,7 @@ main {
   .post__info {
     padding: 0;
     font-size: 0.9em;
+    line-height: 1em;
     color: var(--subtext1);
 }
 

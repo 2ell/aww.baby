@@ -40,6 +40,8 @@
 
 .post__title {
     text-transform: capitalize;
+    font-size: 2em;
+    font-weight: 800;
 }
 
     .post__date {
@@ -48,6 +50,7 @@
         flex-direction: column;
         gap: 0em;
         align-items: flex-start;
+        line-height: 1.2em;
     }
 
     .post__published a {
@@ -76,7 +79,7 @@ hr.spacer {
 .post__archive {
     list-style-type: none;
     & li {
-        margin-bottom: 1em;
+        margin: 0.2em 0.2em 1em 0em;
         display: flex;
         gap: 1em;
         & span:first-child {
