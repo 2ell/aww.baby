@@ -5,7 +5,7 @@
     gap: 1rem;
     padding: 0;
     margin: 0;
-    min-height: 3em;
+    min-height: 100px;
 }
 
 .header__back {
@@ -25,7 +25,6 @@
 .site__title {
       margin: 0;
       padding: 0 0 0 -20px;
-      min-height: 150px;
       & a {
         margin: 0;
         padding: 0;
