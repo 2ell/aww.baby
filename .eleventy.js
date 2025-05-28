@@ -2,6 +2,7 @@ import filters from './src/_config/filters.js';
 import pluginIcons from 'eleventy-plugin-icons';
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
 import eleventyPluginExcerpt from 'eleventy-plugin-excerpt';
+import { IdAttributePlugin } from "@11ty/eleventy";
 
 export default function(eleventyConfig) {
 	// Order matters, put this at the top of your configuration file.
@@ -32,6 +33,7 @@ export default function(eleventyConfig) {
   // Layout aliasing
   eleventyConfig.addLayoutAlias("post", "post.njk");
   eleventyConfig.addLayoutAlias("page", "page.njk");
+
   // Custom date parsing
   // --------------------- Filters
   eleventyConfig.addFilter('toIsoString', filters.toISOString);
@@ -57,6 +59,7 @@ export default function(eleventyConfig) {
   
 
   //---------------------- Plugins
+  eleventyConfig.addPlugin(IdAttributePlugin);
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPlugin(eleventyPluginExcerpt);
   eleventyConfig.addPlugin(pluginIcons, {
