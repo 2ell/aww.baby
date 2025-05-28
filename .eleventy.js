@@ -3,6 +3,8 @@ import pluginIcons from 'eleventy-plugin-icons';
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
 import eleventyPluginExcerpt from 'eleventy-plugin-excerpt';
 import { IdAttributePlugin } from "@11ty/eleventy";
+import { feedPlugin } from "@11ty/eleventy-plugin-rss";
+
 
 export default function(eleventyConfig) {
 	// Order matters, put this at the top of your configuration file.
@@ -79,5 +81,23 @@ export default function(eleventyConfig) {
       errorNotFound: true,
     },
   });
+  eleventyConfig.addPlugin(feedPlugin, {
+		type: "atom", // or "rss", "json"
+		outputPath: "/feed.xml",
+		collection: {
+			name: "posts", // iterate over `collections.posts`
+			limit: 10,     // 0 means no limit
+		},
+		metadata: {
+			language: "en",
+			title: "aww.baby",
+			subtitle: "to Beginner's Mind and back, one awkward baby step at a time.",
+			base: "https://aww.baby/",
+			author: {
+				name: "laurel",
+				email: "", // Optional
+			}
+		}
+	});
 };
 

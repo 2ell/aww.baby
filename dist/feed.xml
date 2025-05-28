@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>aww.baby</title>
+  <subtitle>to Beginner&#39;s Mind and back, one awkward baby step at a time.</subtitle>
+  <link href="https://aww.baby/feed.xml" rel="self" />
+  <link href="https://aww.baby/" />
+  <updated>2025-05-28T23:18:54Z</updated>
+  <id>https://aww.baby/</id>
+  <author>
+    <name>laurel</name>
+  </author>
+</feed>
