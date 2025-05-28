@@ -16,6 +16,7 @@
   "dependencies": {
     "@11ty/eleventy": "^3.1.0",
     "@11ty/eleventy-navigation": "^0.3.5",
+    "@11ty/eleventy-plugin-rss": "^2.0.4",
     "@vidhill/fortawesome-brands-11ty-shortcode": "^1.1.0",
     "dayjs": "^1.11.13",
     "eleventy-plugin-excerpt": "^1.1.2",

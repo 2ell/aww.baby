@@ -440,8 +440,16 @@ footer .icon-heart svg {
   border: 0;
 }
 
+#edit-notes {
+  text-transform: lowercase;
+  line-height: 1em;
+  font-size: 1em;
+  margin: 0 0 0.8em 0;
+}
+
 .post__edited {
   color: var(--subtext1);
+  line-height: 1em;
   font-size: 0.9em;
 }
 

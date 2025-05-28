@@ -9,8 +9,8 @@ layout: base.njk
             <a href="{{ post.url }}">{{ page.date | formatDate('MMM D, YYYY')  }}</a>
         </span>
         <span class="post__edited">
-        {% if edited %}
-        (edited {{ page.edited | formatDate('MMM D, YYYY')  }})</span></i>
+        {% if editDate %}
+        (edited <a href="#edit-notes">{{ page.editDate | formatDate('MMM D, YYYY')  }}</a>)</span></i>
         </span>
         {% endif %}
     </div>
@@ -26,11 +26,10 @@ layout: base.njk
 <hr class="spacer">
 
 <div class="post__info">
-{% if edited %}
+{% if editDate %}
 <div class="edit__date">
-    <span class="post__edited">Edit notes:
-        <br>
-        <strong>{{ page.edited | formatDate('MMM D, YYYY')  }}</strong></span>
+    <h6 class="post__edited">Edit notes:</h6>
+        <strong>{{ page.editDate | formatDate('MMM D, YYYY')  }}</strong></span>
     {% if editReason %}
         <span class="edit-note">
             <i>- {{ editReason }}</i>
