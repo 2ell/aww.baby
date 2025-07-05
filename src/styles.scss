@@ -1,0 +1,22 @@
+@use "scss/normalize.scss";
+@use "scss/layout.scss";
+@use "scss/theme.scss";
+@use "scss/components.scss";
+@use "scss/header.scss";
+@use "scss/post.scss";
+@use "scss/footer.scss";
+
+
+body {
+    font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    letter-spacing: 0.02rem;
+    font-size: var(--text-reg);
+}
+ 
+@media (prefers-reduced-motion) {
+  *, *::before, *::after {
+    animation-duration: 0s !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

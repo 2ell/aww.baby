@@ -1,0 +1,11 @@
+[build.environment]
+  TZ = "America/Edmonton"
+
+[build]
+publish = "dist"
+
+# Default build command.
+command = "npm run build"
+
+[dev]
+  command = "npm start"

@@ -1,0 +1,36 @@
+img {
+  margin-top: 1rem;
+  max-width: 100%;
+}
+
+img + .caption {
+  font-size: 0.9em;
+  margin-top: 0;
+  text-align: center;
+  font-style: italic;
+  color: var(--muted);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+hr {
+    border: 0;
+    border-bottom: 0.01rem dotted var(--overlay2);
+    margin: 1em 0 2em 0;
+}
+
+.hr__post {
+  margin: 2em 0 1em 0;
+}
+
+
+.icon-sm {
+  width: 1em;
+  height: 1em;
+}
+
+.icon-fill {
+    fill: currentColor;
+}

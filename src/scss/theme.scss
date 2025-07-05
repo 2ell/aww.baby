@@ -1,0 +1,57 @@
+:root {
+    /* via https://catppuccin.com/palette/ */
+    accent-color: #cba6f7;
+    --background: #cdd6f4;
+    --text: #11111b;
+    --subtext1: #181825;
+    --subtext0: #1e1e2e;
+    --subtext2: #313244;
+    --overlay2: #45475a;
+    --overlay1: #585b70;
+    --overlay0: #6c7086;
+    --surface2: #7d829b;
+    --surface1: #9399b2;
+    --surface0: #a6adc8;
+    --base: #bac2de;
+    --link: #1e66f5;
+
+    --blue: #89b4fa;
+    --saphhire: #74c7ec;
+    --sky: #89dceb;
+
+    --text-sm: 0.9rem;
+    --text-reg: 1rem;
+    --text-lg: 1.4rem;
+}
+
+code {
+    color: var(--accent);
+}
+
+
+code,
+kbd,
+samp {
+  font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace; 
+  font-size: 0.9em;
+  word-spacing: -0.1em;
+  font-weight: 700;
+}
+
+
+body {
+    color: var(--text);
+    background-color: var(--background);
+}
+
+a:not([class], .current a, .to-top) {
+    color: var(--subtext1);
+    text-underline-offset: 0.11rem;
+    text-decoration-thickness: 0.09rem;
+    text-decoration-color: var(--overlay0);
+      position: relative;
+        &:hover {
+            text-decoration-thickness: 0.1rem;
+                text-decoration-color: var(--text);
+        }
+}

@@ -1,0 +1,13 @@
+.foot {
+    background-color: var(--text);
+    padding: 0 0 2rem 0;
+}
+
+.to-top-wrapper {
+    padding: 2rem 0 2rem 0;
+    align-self: center;
+        a {
+            font-size: var(--text-sm);
+            color: var(--background);
+        }
+}

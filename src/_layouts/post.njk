@@ -1,0 +1,48 @@
+---
+layout: base.njk
+---
+
+<article>
+  <time class="post__date">{{ date | blogDate }}</time>
+  <h2>{{title}}</h2>
+
+  <div class="post__body">
+  {{content|safe}}
+</div>
+</article>
+
+<hr class="hr__post">
+
+<div class="post__footer">
+
+  <div class="post__published">
+    <span class="icon">
+    {% icon "tabler-o:calendar-check", class="icon-sm" %}
+    </span>
+                <span class="post__detail">
+    Published
+</span> |
+    <time class="published__date">{{ date | formatDate('MMMM D, YYYY') }}</time> at <time class="published__time">{{ date | formatDate('h:mm a') }}</time>
+  </div>
+
+    <div class="post__tags">
+      {%
+          if tags.length >
+          1
+        %}
+          <!-- tags -->
+           <span class="icon">
+            {% icon "tabler-o:tag", class="icon-sm" %}
+            </span>
+            <span class="post__detail">
+            Tags
+            </span> |
+          {% for tag in tags %}{% if tag != "blog" %}
+            <span><a href="/tags/{{ tag | slugify }}/"> {{ tag }} </a></span>
+          {% endif %}{% endfor %}
+        {% endif %}
+    </div>
+  
+  </div>
+
+</div>

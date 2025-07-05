@@ -1,0 +1,26 @@
+#top {
+  position: absolute;
+  top: 0;
+}
+
+header, footer {
+  margin: 0 auto;
+  text-align: center;
+}
+
+header {
+  padding: 0.5rem 0.3rem;
+}
+
+main {
+  max-width: clamp(320px, 90%, 1000px);
+  min-height: 85vh;
+  margin: auto;
+  padding: 1.5rem clamp(1rem, 5%, 2rem);
+  line-height: 1.4em;
+}
+
+.content__wrapper {
+  max-width: 40em;
+  margin: 0 auto;
+}

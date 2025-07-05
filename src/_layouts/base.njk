@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   
+    <link rel="icon" href="{{ '/favicon.ico' | url }}" sizes="any" />
+    <link rel="icon" href="{{ '/favicon.svg' | url }}" type="image/svg+xml" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/apple-touch-icon.png' | url }}" />
+    <link rel="manifest" href="{{ '/site.webmanifest' | url }}" />
+    
+    <link rel="stylesheet" type="text/css" href="/styles.css"/>
+    <title>aww.baby</title>
+  </head>
+  <body>
+
+
+    {% include "partials/header.njk" %}
+
+    <!-- page content -->
+    <main>
+      <div class="content__wrapper">
+
+    	    {{ content | safe }}
+
+      </div>
+    </main>
+
+    <footer>
+    {% include "partials/footer.njk" %}
+    </footer>
+
+
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<span id="top"></span>
+<header>
+
+    <div class="header__wrapper">
+
+    <!-- logo -->
+        <div class="site__title">
+            {% include "partials/logo.njk" %}
+        </div>
+
+
+    <!-- navigation -->
+        <div class="header__nav">
+          <nav aria-label="Main Navigation">
+            <div class="nav__links">
+              {% set navPages = collections.all | eleventyNavigation %}
+                <ul>
+                  {%- for entry in navPages %}
+                    <li{% if entry.url == page.url %} class="current"{% endif %}>
+                    {{ entry.data.icon }}<a href="{{ entry.url }}">{{ entry.title }}</a>
+                    </li>
+                  {%- endfor %}
+                </ul>
+            </div> 
+          </nav>
+        </div>
+
+
+  </div>
+
+</header>
