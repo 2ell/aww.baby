@@ -32,7 +32,7 @@ export default function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("src/**/*.jpg");
   eleventyConfig.addPassthroughCopy("src/**/*.svg");
 
-  eleventyConfig.addPassthroughCopy({ "assets/favicon": "/" });
+  eleventyConfig.addPassthroughCopy({ "assets/favicon/": "/" });
 
   eleventyConfig.addPassthroughCopy("assets");
 
