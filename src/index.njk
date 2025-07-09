@@ -9,16 +9,18 @@ eleventyNavigation:
 <ul class="collection__ul">
     {%- for post in collections.blog | reverse -%}
 
-  <div class="collection__item">
+
     <li>
+        <div class="collection__item">
       <div class="collection__head">
           <a class="collection__perma" href="{{ post.url }}" title="Permalink">{{ post.date | blogDate }}</a>
       </div>
                  <div class="post__content">
                   <p>{{ post.content | md | safe }}</p>
               </div> 
+                </div>
     </li>
-  </div>
+
   {% endfor %}
 </ul>
 
