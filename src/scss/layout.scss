@@ -3,6 +3,8 @@
   top: 0;
 }
 
+// SECTIONS
+
 header, footer {
   margin: 0 auto;
   text-align: center;
@@ -14,11 +16,13 @@ header {
 
 main {
   max-width: clamp(320px, 90%, 1000px);
-  min-height: 85vh;
+  min-height: 95vh;
   margin: auto;
   padding: 1.5rem clamp(1rem, 5%, 2rem);
   line-height: 1.4em;
 }
+
+// WRAPPERS
 
 .content__wrapper {
   max-width: 40em;

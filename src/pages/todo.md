@@ -1,6 +1,7 @@
 ---
 layout: base.njk
 title: todo
+permalink: "/{{ title | slugify }}/"
 eleventyExcludeFromCollections: true
 eleventyNavigation:
     key: todo

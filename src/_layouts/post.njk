@@ -11,17 +11,16 @@ layout: base.njk
 </div>
 </article>
 
-<hr class="hr__post">
+<hr class="hr__postfoot">
 
 <div class="post__footer">
 
   <div class="post__published">
     <span class="icon">
-    {% icon "tabler-o:calendar-check", class="icon-sm" %}
+    <i>
+      {% icon "tabler-f:calendar-event", class="icon-sm" %}
+      </i>
     </span>
-                <span class="post__detail">
-    Published
-</span> |
     <time class="published__date">{{ date | formatDate('MMMM D, YYYY') }}</time> at <time class="published__time">{{ date | formatDate('h:mm a') }}</time>
   </div>
 
@@ -31,13 +30,10 @@ layout: base.njk
           1
         %}
           <!-- tags -->
-           <span class="icon">
-            {% icon "tabler-o:tag", class="icon-sm" %}
-            </span>
-            <span class="post__detail">
-            Tags
-            </span> |
-          {% for tag in tags %}{% if tag != "blog" %}
+          <i>
+            {% icon "tabler-f:tag", class="icon-sm" %}
+         </i>
+             {% for tag in tags %}{% if tag != "blog" %}
             <span><a href="/tags/{{ tag | slugify }}/"> {{ tag }} </a></span>
           {% endif %}{% endfor %}
         {% endif %}

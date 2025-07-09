@@ -1,6 +1,7 @@
 ---
 layout: base.njk
 title: Info
+permalink: "/{{ title | slugify }}/"
 eleventyNavigation:
     key: info
     order: 1
@@ -15,4 +16,4 @@ Nullam semper elementum justo, non pellentesque ligula euismod vel. Sed eros arc
 - Integer feugiat ipsum at diam fermentum
 - Finibus dolor euismod
 - Suspendisse vitae tortor
-- enim rhoncus euismod
+- Enim rhoncus euismod

@@ -1,3 +1,5 @@
+// IMAGES
+
 img {
   margin-top: 1rem;
   max-width: 100%;
@@ -11,9 +13,13 @@ img + .caption {
   color: var(--muted);
 }
 
+// HEADINGS
+
 h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
 }
+
+// LINE SEPARATORS
 
 hr {
     border: 0;
@@ -21,16 +27,41 @@ hr {
     margin: 1em 0 2em 0;
 }
 
-.hr__post {
+.hr__postfoot {
   margin: 2em 0 1em 0;
 }
 
+// ICONS
 
 .icon-sm {
   width: 1em;
   height: 1em;
 }
 
+.icon-m {
+  width: 1.2em;
+}
+
 .icon-fill {
     fill: currentColor;
+}
+
+i {
+    display: inline-flex;
+svg {
+  stroke-width: 0.1rem;
+  align-self: flex-end;
+  }
+}
+
+// MARKDOWN COMPONENTS
+
+blockquote {
+margin-left: 1rem;
+padding-left: 0.5rem;
+border-left: 0.3rem solid var(--surface2);
+    p {
+      color: var(--subtext2);
+      padding: 0;
+    }
 }

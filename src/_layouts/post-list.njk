@@ -11,19 +11,11 @@ layout: base.njk
     <li>
       <div class="collection__head">
           <a class="collection__perma" href="{{ post.url }}" title="Permalink">{{ post.date | blogDate }}</a>
-        <span class="collection__time">{{ post.content | timeToRead }}</span>
       </div>
                  <div class="post__content">
-         <p>{{ post.content | safe }}</p>
-         {%- if post.data.excerpt -%}
-</div>
-
-         <p>{{ post.body | safe }}</p>
-         </div>
-         {%- else -%}{%- endif -%}
-         
-  </li>
+                  <p>{{ post.content | safe }}</p>
+              </div> 
+    </li>
   </div>
-  <hr>
   {% endfor %}
 </ul>

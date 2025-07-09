@@ -68,11 +68,6 @@ img {
   border-style: none;
 }
 
-ul[role=list],
-ol[role=list] {
-  list-style: none;
-}
-
 button,
 input,
 optgroup,
@@ -194,7 +189,7 @@ header {
 
 main {
   max-width: clamp(320px, 90%, 1000px);
-  min-height: 85vh;
+  min-height: 95vh;
   margin: auto;
   padding: 1.5rem clamp(1rem, 5%, 2rem);
   line-height: 1.4em;
@@ -222,8 +217,19 @@ main {
   --base: #bac2de;
   --link: #1e66f5;
   --blue: #89b4fa;
-  --saphhire: #74c7ec;
+  --lavender: #b4befe;
+  --sapphire: #74c7ec;
   --sky: #89dceb;
+  --teal: #94e2d5;
+  --green: #a6e3a1;
+  --yellow: #f9e2af;
+  --peach: #fab387;
+  --maroon: #eba0ac;
+  --red: #f38ba8;
+  --mauve: #cba6f7;
+  --pink: #f5c2e7;
+  --flamingo: #f2cdcd;
+  --rosewater: #f5e0dc;
   --text-sm: 0.9rem;
   --text-reg: 1rem;
   --text-lg: 1.4rem;
@@ -282,7 +288,7 @@ hr {
   margin: 1em 0 2em 0;
 }
 
-.hr__post {
+.hr__postfoot {
   margin: 2em 0 1em 0;
 }
 
@@ -291,8 +297,30 @@ hr {
   height: 1em;
 }
 
+.icon-m {
+  width: 1.2em;
+}
+
 .icon-fill {
   fill: currentColor;
+}
+
+i {
+  display: inline-flex;
+}
+i svg {
+  stroke-width: 0.1rem;
+  align-self: flex-end;
+}
+
+blockquote {
+  margin-left: 1rem;
+  padding-left: 0.5rem;
+  border-left: 0.3rem solid var(--surface2);
+}
+blockquote p {
+  color: var(--subtext2);
+  padding: 0;
 }
 
 nav ul {
@@ -307,7 +335,7 @@ nav ul {
   display: flex;
   flex-direction: row;
   gap: 1rem;
-  max-width: clamp(320px, 100%, 710px);
+  max-width: clamp(320px, 100%, 720px);
   margin: auto;
   padding: 0.5rem;
 }
@@ -332,7 +360,6 @@ nav ul {
 }
 
 .collection__ul {
-  list-style: none;
   padding: 0;
   margin: 0;
 }
@@ -344,6 +371,16 @@ nav ul {
   display: flex;
   flex-direction: column;
   gap: 0rem;
+}
+
+.collection__item:not(:last-of-type) {
+  padding: 0 0 2em 0;
+  margin: 0 0 2em 0;
+  border-bottom: 1px dotted var(--subtext2);
+}
+
+.collection__item:last-of-type {
+  margin: 0 0 2em 0;
 }
 
 article .post__date {
@@ -366,46 +403,27 @@ article .post__date {
   color: var(--text);
 }
 
-.collection__time {
-  font-weight: 500;
-  font-size: 0;
-}
-
 .collection__title h1 {
   padding: 0;
   margin: 0;
   font-size: 1.8em;
 }
 
-.post__content blockquote {
-  margin-left: 1rem;
-  padding-left: 0.5rem;
-  border-left: 0.3rem solid var(--surface2);
-}
-.post__content blockquote p {
-  color: var(--overlay2);
-  padding: 0;
+.post__content {
+  border: 1px solid transparent;
 }
 
 article {
   padding: 1rem 0 0 0;
 }
-article .post__body {
+
+.post__body {
   margin: 1rem 0 0 0;
-}
-article blockquote {
-  margin-left: 1rem;
-  padding-left: 0.5rem;
-  border-left: 0.3rem solid var(--surface2);
-}
-article blockquote p {
-  color: var(--overlay2);
-  padding: 0;
 }
 
 .post__footer {
   --min: 10ch;
-  --gap: 0.5rem;
+  --gap: 0.2rem;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -439,18 +457,80 @@ article blockquote p {
   margin-left: -0.1rem;
 }
 
-.foot {
-  background-color: var(--subtext);
-  padding: 0 0 2rem 0;
+#footer {
+  --padding: 0.5rem;
+  font-size: var(--text-sm);
+}
+
+#foot {
+  max-width: 50em;
+  margin: 0 auto;
+  --min: 10ch;
+  --gap: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+  padding: var(--padding);
+}
+
+#foot > * {
+  flex: 1 1 var(--min);
+  padding: 0.2rem;
+  font-size: var(--text-sm);
+}
+
+#foot-left {
+  text-align: left;
+}
+
+#foot-center {
+  text-align: center;
+}
+#foot-center a {
+  font-size: var(--text-sm);
+  color: var(--text);
 }
 
 .to-top-wrapper {
-  padding: 2rem 0 2rem 0;
-  align-self: center;
+  display: inline-flex;
+  gap: 0.2rem;
+  align-items: center;
 }
-.to-top-wrapper a {
+
+#foot-right {
+  text-align: right;
+}
+
+#bottom-line {
+  background-color: var(--subtext1);
+  color: var(--background);
+}
+#bottom-line a {
+  color: var(--background);
+}
+#bottom-line a:hover {
+  color: var(--base);
+  text-decoration-color: var(--base);
+}
+
+.bottom-line {
+  max-width: 50em;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: var(--padding);
+}
+
+.bottom-line > * {
   font-size: var(--text-sm);
-  color: var(--text);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.1rem;
+}
+
+#cc a {
+  font-weight: 500;
 }
 
 body {
@@ -459,6 +539,12 @@ body {
   font-size: var(--text-reg);
 }
 
+/* via https://moderncss.dev/pure-css-smooth-scroll-back-to-top/ */
+@media screen and (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
 @media (prefers-reduced-motion) {
   *, *::before, *::after {
     animation-duration: 0s !important;

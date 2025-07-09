@@ -1,8 +1,9 @@
 ---
 layout: base.njk
-title: RSS
+title: Feeds
+permalink: "/{{ title | slugify }}/"
 eleventyNavigation:
-    key: rss
+    key: feeds
     order: 9
 ---
 
