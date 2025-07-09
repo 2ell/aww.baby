@@ -1,6 +1,10 @@
 ---
 layout: base.njk
-title: 'aww baby'
+title: Posts
+permalink: "/{{ title | slugify }}/"
+eleventyNavigation:
+  key: Posts
+  order: 2
 ---
 
 <ul class="collection__ul">
@@ -20,4 +24,3 @@ title: 'aww baby'
 
   {% endfor %}
 </ul>
-

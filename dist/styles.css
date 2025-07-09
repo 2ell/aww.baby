@@ -334,14 +334,16 @@ nav ul {
 .header__wrapper {
   display: flex;
   flex-direction: row;
-  gap: 1rem;
-  max-width: clamp(320px, 100%, 720px);
+  gap: 0.8rem;
+  max-width: clamp(320px, 100%, 770px);
   margin: auto;
-  padding: 0.5rem;
+  padding: 0.2rem;
 }
 
 .header__nav {
-  line-height: 1.1rem;
+  width: 100%;
+  align-self: flex-start;
+  text-align: left;
 }
 
 .current a {
@@ -350,13 +352,24 @@ nav ul {
   text-decoration: none;
 }
 
-#logo {
+#logo__light {
   padding: 0;
   margin: 0;
-  fill: var(--overlay2);
+  fill: var(--text);
 }
-#logo:hover {
-  fill: var(--link);
+#logo__light:hover {
+  background-color: var(--mauve);
+}
+
+#logo__dark {
+  padding: 0;
+  margin: 0;
+  fill: var(--background);
+  stroke: var(--text);
+  stroke-width: 0.2;
+}
+#logo__dark:hover {
+  fill: var(--base);
 }
 
 .collection__ul {
@@ -457,6 +470,12 @@ article {
   margin-left: -0.1rem;
 }
 
+#footer__nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 #footer {
   --padding: 0.5rem;
   font-size: var(--text-sm);
@@ -514,11 +533,11 @@ article {
 }
 
 .bottom-line {
-  max-width: 50em;
+  max-width: 45em;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 1rem;
   padding: var(--padding);
 }
 
@@ -529,6 +548,9 @@ article {
   gap: 0.1rem;
 }
 
+#cc {
+  align-self: flex-end;
+}
 #cc a {
   font-weight: 500;
 }

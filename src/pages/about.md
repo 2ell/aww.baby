@@ -1,9 +1,9 @@
 ---
 layout: base.njk
-title: Info
+title: About
 permalink: "/{{ title | slugify }}/"
 eleventyNavigation:
-    key: info
+    key: About
     order: 1
 ---
 

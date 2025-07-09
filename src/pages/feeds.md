@@ -3,7 +3,7 @@ layout: base.njk
 title: Feeds
 permalink: "/{{ title | slugify }}/"
 eleventyNavigation:
-    key: feeds
+    key: Feeds
     order: 9
 ---
 
