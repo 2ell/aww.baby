@@ -377,7 +377,7 @@ nav ul {
   margin: 0;
   list-style: none;
 }
-.collection__ul li {
+.collection__ul > li {
   display: flex;
   flex-direction: column;
 }
@@ -388,7 +388,7 @@ nav ul {
 
 .collection__ul li:not(:last-of-type) > div {
   padding: 0 0 2em 0;
-  margin: 0 0 2em 0;
+  margin: 1rem 0 2em 0;
   border-bottom: 1px dotted var(--subtext2);
 }
 

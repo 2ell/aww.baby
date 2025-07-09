@@ -4,7 +4,7 @@
   padding: 0;
   margin: 0;
   list-style: none;
-    li {
+    > li {
     display: flex;
     flex-direction: column;
   }
@@ -17,7 +17,7 @@
 
 .collection__ul li:not(:last-of-type) > div {
   padding: 0 0 2em 0;
-  margin: 0 0 2em 0;
+  margin: 1rem 0 2em 0;
   border-bottom: 1px dotted var(--subtext2);
 }
 
