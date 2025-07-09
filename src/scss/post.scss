@@ -3,11 +3,11 @@
 .collection__ul {
   padding: 0;
   margin: 0;
+  list-style: none;
 }
 
 .collection__item {
   margin: 1em 0;
-
   & li {
     display: flex;
     flex-direction: column;

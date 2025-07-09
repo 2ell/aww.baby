@@ -1,8 +1,8 @@
 ---
 title: A blog post
 date: 2024-04-06T12:10:59.445Z
-tags: blog
 layout: post.njk
+tags: blog
 permalink: "/{{ title | slugify }}/"
 ---
 

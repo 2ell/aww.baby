@@ -1,5 +1,7 @@
 import {getAllPosts, showInSitemap, tagList} from './src/_config/collections.js';
 import filters from './src/_config/filters.js';
+import markdownIt from 'markdown-it';
+import markdownItAttrs from 'markdown-it-attrs';
 import timeToRead from "eleventy-plugin-time-to-read"
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
 import pluginIcons from 'eleventy-plugin-icons';
@@ -12,7 +14,6 @@ function blogDate(input) {
     day: "numeric",
   })}`;
 }
-
 
 export default function(eleventyConfig) {
 	// Order matters, put this at the top of your configuration file.
@@ -35,6 +36,8 @@ export default function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "assets/favicon/": "/" });
 
   eleventyConfig.addPassthroughCopy("assets");
+
+  eleventyConfig.setFrontMatterParsingOptions({ excerpt: true,   excerpt_separator: '<!-- ex -->' });
 
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
     eleventyConfig.addPlugin(timeToRead, {
@@ -63,5 +66,48 @@ export default function(eleventyConfig) {
   eleventyConfig.addFilter('toIsoString', filters.toISOString);
   eleventyConfig.addFilter('formatDate', filters.formatDate);
   eleventyConfig.addFilter('blogDate', blogDate);
+  eleventyConfig.addFilter("md", function (content = "") {
+  return markdownIt({ html: true }).render(content);
+});
+
+  eleventyConfig.addCollection('tagList', function (collection) {
+    let tagSet = new Set();
+    collection.getAll().forEach(function (item) {
+      if ('tags' in item.data) {
+        let tags = item.data.tags;
+
+        tags = tags.filter(function (item) {
+          switch (item) {
+            case 'all':
+            case 'nav':
+            case 'post':
+            case 'posts':
+              return false;
+          }
+
+          return true;
+        });
+
+        for (const tag of tags) {
+          tagSet.add(tag);
+        }
+      }
+    });
+
+    return [...tagSet];
+  });
+
+
+  eleventyConfig.addFilter('pageTags', (tags) => {
+    const generalTags = ['all', 'nav', 'post', 'posts'];
+
+    return tags
+      .toString()
+      .split(',')
+      .filter((tag) => {
+        return !generalTags.includes(tag);
+      });
+  });
+
 
   }

@@ -1,7 +1,7 @@
 ---
 title: Musings
 date: 2025-04-06T12:10:59.445Z
-tags: blog, thoughts, quotes
+tags: [blog, thoughts, quotes]
 layout: post.njk
 permalink: "/{{ title | slugify }}/"
 ---
@@ -9,6 +9,8 @@ permalink: "/{{ title | slugify }}/"
 > Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquam et nunc in finibus. Vestibulum commodo leo et est interdum facilisis. 
 
 Maecenas faucibus arcu id turpis dignissim, at congue erat semper. Sed placerat enim non diam ullamcorper, eu fringilla odio convallis. Maecenas ac erat tincidunt, aliquam risus pharetra, facilisis ante. In non _dolor hendrerit_, viverra lorem vitae, aliquam orci. Nulla eu vestibulum massa. Duis facilisis eu purus ut vulputate. Morbi varius eros ipsum. Nulla facilisi. Etiam congue lorem eget hendrerit luctus. Class **aptent taciti** sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer aliquam nec quam vel facilisis. Ut bibendum ligula eget quam laoreet elementum. 
+
+<!-- ex -->
 
 ### Cras a felis non sapien rutrum imperdiet quis id erat. Sed tempor neque id turpis egestas, tristique aliquam massa maximus.
 

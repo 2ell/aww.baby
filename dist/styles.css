@@ -362,6 +362,7 @@ nav ul {
 .collection__ul {
   padding: 0;
   margin: 0;
+  list-style: none;
 }
 
 .collection__item {
