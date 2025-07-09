@@ -15,7 +15,7 @@ eleventyNavigation:
           <a class="collection__perma" href="{{ post.url }}" title="Permalink">{{ post.date | blogDate }}</a>
       </div>
                  <div class="post__content">
-                  <p>{{ post.content | safe }}</p>
+                  <p>{{ post.content | md | safe }}</p>
               </div> 
     </li>
   </div>
