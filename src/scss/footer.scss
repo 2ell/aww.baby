@@ -1,5 +1,5 @@
 .foot {
-    background-color: var(--text);
+    background-color: var(--subtext);
     padding: 0 0 2rem 0;
 }
 
@@ -8,6 +8,6 @@
     align-self: center;
         a {
             font-size: var(--text-sm);
-            color: var(--background);
+            color: var(--text);
         }
 }

@@ -404,11 +404,14 @@ article blockquote p {
 }
 
 .post__footer {
-  margin: 0 0 2rem 0;
-  font-size: var(--text-sm);
+  --min: 10ch;
+  --gap: 0.5rem;
   display: flex;
   justify-content: space-between;
-  align-content: flex-start;
+  flex-wrap: wrap;
+  gap: var(--gap);
+  margin: 0 0 2rem 0;
+  font-size: var(--text-sm);
 }
 .post__footer div {
   padding: 0rem;
@@ -437,7 +440,7 @@ article blockquote p {
 }
 
 .foot {
-  background-color: var(--text);
+  background-color: var(--subtext);
   padding: 0 0 2rem 0;
 }
 
@@ -447,7 +450,7 @@ article blockquote p {
 }
 .to-top-wrapper a {
   font-size: var(--text-sm);
-  color: var(--background);
+  color: var(--text);
 }
 
 body {

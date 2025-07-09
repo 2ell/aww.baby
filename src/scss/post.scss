@@ -82,11 +82,18 @@ article {
 }
 
 .post__footer {
-  margin: 0 0 2rem 0;
-  font-size: var(--text-sm);
+  --min: 10ch;
+  --gap: 0.5rem;
+
   display: flex;
   justify-content: space-between;
-  align-content: flex-start;
+  flex-wrap: wrap;
+  gap: var(--gap);
+
+  margin: 0 0 2rem 0;
+  font-size: var(--text-sm);
+
+
   div {
     padding: 0rem;
     margin: 0 0 0.5rem 0;
