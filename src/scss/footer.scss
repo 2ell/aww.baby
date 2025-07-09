@@ -10,7 +10,7 @@
 // FOOT SECTIONS
 
 #foot {
-    max-width: 50em;
+    max-width: 47em;
     margin: 0 auto;
     --min: 10ch;
     --gap: 0.5rem;
@@ -19,13 +19,17 @@
     flex-wrap: wrap;
     gap: var(--gap);
 
-    padding: var(--padding);
+    padding: 0.5rem 0.5rem 0 0.5rem;
 }
 
 #foot > * {
     flex: 1 1 var(--min);
     padding: 0.2rem;
     font-size: var(--text-sm);
+                    a {
+                    font-size: var(--text-sm);
+                    color: var(--text);
+                }
 }
 
 #foot-left {
@@ -36,24 +40,26 @@
 #foot-center {
     text-align: center;
     //background-color: var(--sky);
-                    a {
-                    font-size: var(--text-sm);
-                    color: var(--text);
-                }
 }
-
-        //---- to top
-
-        .to-top-wrapper {
-            display: inline-flex;
-            gap: 0.2rem;
-            align-items: center;
-        }
 
 #foot-right {
     text-align: right;
     //background-color: var(--green);
 }
+
+
+
+        //---- to top
+
+        .to-top-wrapper {
+            display: inline-flex;
+            gap: 0;
+            align-items: center;
+        }
+
+
+
+
 
 // BOTTOM LINE
 
