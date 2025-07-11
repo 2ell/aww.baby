@@ -17,24 +17,24 @@ layout: base.njk
 
   <div class="post__published">
     <span class="icon">
-    <i>
+    <i aria-label="Calendar Icon">
       {% icon "tabler-f:calendar-event", class="icon-sm" %}
       </i>
     </span>
-    <time class="published__date subtext">{{ date | formatDate('MMMM D, YYYY') }}</time> at <time class="published__time subtext">{{ date | formatDate('h:mm a') }}</time>
+    <time class="published__date subtext">{{ date | formatDate('MMMM D, YYYY') }}</time> <i aria-label="At">{% icon "tabler-o:at", class="icon-sm subtext" %}</i> <time class="published__time subtext">{{ date | formatDate('h:mm a') }}</time>
   </div>
-
+<div></div>
     <div class="post__tags">
       {%
           if tags.length >
           1
         %}
           <!-- tags -->
-          <i>
+          <i aria-label="Tag Icon">
             {% icon "tabler-f:tag", class="icon-sm" %}
          </i>
              {% for tag in tags %}{% if tag != "blog" %}
-            <span><a class="subtext" href="/tags/{{ tag | slugify }}/"> {{ tag }} </a></span>
+            <span><a class="tag subtext" href="/tags/{{ tag | slugify }}/"> {{ tag }} </a></span>
           {% endif %}{% endfor %}
         {% endif %}
     </div>

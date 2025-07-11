@@ -50,8 +50,8 @@ hr {
 i {
     display: inline-flex;
 svg {
-  stroke-width: 0.1rem;
-  align-self: flex-end;
+  stroke-width: 0.15rem;
+  align-self: center;
   }
 }
 
@@ -75,7 +75,7 @@ blockquote {
     margin: 0;
     fill: var(--subtext);
         &:hover {
-        fill: var(--text);
+        fill: var(--dark1);
     }
 }
 

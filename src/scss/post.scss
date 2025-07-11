@@ -49,7 +49,7 @@ article {
 
 .post__footer {
   --min: 10ch;
-  --gap: 0.2rem;
+  --gap: 0.3rem;
 
   display: flex;
   justify-content: space-between;
@@ -66,22 +66,28 @@ article {
 }
 
 .post__published {
-  display: flex;
-  gap: 0.2rem;
+  display: inline-flex;
   line-height: 1em;
+  gap: 0.2rem;
 }
 
+
 .post__tags {
-    display: flex;
+    display: inline-flex;
     line-height: 1em;
+    gap: 0.2rem;
     & span:not(.icon) {
-      padding: 0 0.2rem 0 0.2rem;
+      margin: 0 0.1rem;
     }
     & span:not(:last-of-type, .icon, .post__detail) {
       &::after {
-        content: ',';
+        text-decoration: none;
         color: var(--subtext);
-        margin-left: -0.1rem;
       }
     }
+            a:hover {
+            color: var(--text);
+            text-decoration-thickness: 0.1rem;
+            text-decoration-color: var(--text);
+        }
 }

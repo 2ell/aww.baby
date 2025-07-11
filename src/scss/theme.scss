@@ -49,16 +49,16 @@
 }
 
 code {
-    background-image: url("/assets/noise.svg");
-    background-color: rgba(146, 146, 209, 0.3);
-    border: 1px solid rgb(30, 30, 46, 0.2);
+    background-image: url("/assets/noise_tr.svg");
+    background-color: rgb(141, 141, 189, 0.2);
+    border: 1px solid rgb(30, 30, 46, 0.1);
     border-radius: 0.2rem;
     background-repeat: repeat;
     background-blend-mode: screen;
-    background-size: 500%;
-    padding: 0.1rem 0.1rem;
+    background-size: 800%;
+    padding: 0.2rem 0.1rem 0 0.1rem;
     margin: 0 0.09rem;
-    color: var(--background);
+    color: var(--dark1);
 }
 
 code,

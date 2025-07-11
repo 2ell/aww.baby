@@ -194,6 +194,10 @@ main {
   margin: 0 auto;
 }
 
+.align-right {
+  text-align: right;
+}
+
 .flex {
   display: flex;
 }
@@ -212,6 +216,10 @@ main {
 
 .justify-content-between {
   justify-content: space-between;
+}
+
+.justify-self-end {
+  justify-self: flex-end;
 }
 
 .align-items-center {
@@ -268,16 +276,16 @@ main {
 }
 
 code {
-  background-image: url("/assets/noise.svg");
-  background-color: rgba(146, 146, 209, 0.3);
-  border: 1px solid rgba(30, 30, 46, 0.2);
+  background-image: url("/assets/noise_tr.svg");
+  background-color: rgba(141, 141, 189, 0.2);
+  border: 1px solid rgba(30, 30, 46, 0.1);
   border-radius: 0.2rem;
   background-repeat: repeat;
   background-blend-mode: screen;
-  background-size: 500%;
-  padding: 0.1rem 0.1rem;
+  background-size: 800%;
+  padding: 0.2rem 0.1rem 0 0.1rem;
   margin: 0 0.09rem;
-  color: var(--background);
+  color: var(--dark1);
 }
 
 code,
@@ -380,8 +388,8 @@ i {
   display: inline-flex;
 }
 i svg {
-  stroke-width: 0.1rem;
-  align-self: flex-end;
+  stroke-width: 0.15rem;
+  align-self: center;
 }
 
 blockquote {
@@ -400,7 +408,7 @@ blockquote p {
   fill: var(--subtext);
 }
 #asterisk:hover {
-  fill: var(--text);
+  fill: var(--dark1);
 }
 
 #logo__horizontal {
@@ -486,7 +494,7 @@ article {
 
 .post__footer {
   --min: 10ch;
-  --gap: 0.2rem;
+  --gap: 0.3rem;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -500,22 +508,27 @@ article {
 }
 
 .post__published {
-  display: flex;
-  gap: 0.2rem;
+  display: inline-flex;
   line-height: 1em;
+  gap: 0.2rem;
 }
 
 .post__tags {
-  display: flex;
+  display: inline-flex;
   line-height: 1em;
+  gap: 0.2rem;
 }
 .post__tags span:not(.icon) {
-  padding: 0 0.2rem 0 0.2rem;
+  margin: 0 0.1rem;
 }
 .post__tags span:not(:last-of-type, .icon, .post__detail)::after {
-  content: ",";
+  text-decoration: none;
   color: var(--subtext);
-  margin-left: -0.1rem;
+}
+.post__tags a:hover {
+  color: var(--text);
+  text-decoration-thickness: 0.1rem;
+  text-decoration-color: var(--text);
 }
 
 #footer {
@@ -557,6 +570,7 @@ article {
   display: inline-flex;
   gap: 0;
   align-items: center;
+  padding: 0 0.5rem;
 }
 
 #bottom-line {
@@ -570,6 +584,10 @@ article {
 #bottom-line a:hover {
   color: var(--background);
   text-decoration-color: var(--background);
+}
+
+.bottom-top {
+  text-align: right;
 }
 
 .bottom-line {

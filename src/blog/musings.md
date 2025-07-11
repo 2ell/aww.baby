@@ -1,7 +1,7 @@
 ---
 title: Musings
 date: 2025-04-06T12:10:59.445Z
-tags: [blog, thoughts, quotes]
+tags: [blog, thoughts, feelings, quotes]
 layout: post.njk
 permalink: "/{{ title | slugify }}/"
 ---
