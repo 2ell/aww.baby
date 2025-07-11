@@ -3,7 +3,7 @@ layout: base.njk
 ---
 
 <article>
-  <time class="post__date">{{ date | blogDate }}</time>
+  <time class="post__date text-uppercase text-small">{{ date | blogDate }}</time>
   <h2>{{title}}</h2>
 
   <div class="post__body">
@@ -21,7 +21,7 @@ layout: base.njk
       {% icon "tabler-f:calendar-event", class="icon-sm" %}
       </i>
     </span>
-    <time class="published__date subtext">{{ date | formatDate('MMMM D, YYYY') }}</time> at <time class="published__time">{{ date | formatDate('h:mm a') }}</time>
+    <time class="published__date subtext">{{ date | formatDate('MMMM D, YYYY') }}</time> at <time class="published__time subtext">{{ date | formatDate('h:mm a') }}</time>
   </div>
 
     <div class="post__tags">
