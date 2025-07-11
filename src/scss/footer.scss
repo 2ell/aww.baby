@@ -62,7 +62,6 @@
 #bottom-line {
     background-image: url('/assets/noise.svg');
     color: var(--background);
-    padding: 1em 0 0 0;
 
     a {
         color: var(--base);
@@ -84,12 +83,14 @@
 }
 
 .bottom-left {
+    padding: 1.5rem 0 0 0;
     text-align: left;
 }
 
 
 #cc {
     display: inline-flex;
+    flex-wrap: wrap;
     gap: 0.1rem;
     align-items: center;
 }
