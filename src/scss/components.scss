@@ -17,13 +17,14 @@ img + .caption {
 
 h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
+  color: var(--subtext);
 }
 
 // LINE SEPARATORS
 
 hr {
     border: 0;
-    border-bottom: 0.01rem dotted var(--overlay2);
+    border-bottom: 0.01rem dotted var(--subtext);
     margin: 1em 0 2em 0;
 }
 
@@ -57,11 +58,34 @@ svg {
 // MARKDOWN COMPONENTS
 
 blockquote {
-margin-left: 1rem;
-padding-left: 0.5rem;
-border-left: 0.3rem solid var(--surface2);
-    p {
-      color: var(--subtext2);
-      padding: 0;
+    margin-left: 1rem;
+    padding-left: 0.5rem;
+    border-left: 0.3rem solid var(--dark2);
+      p {
+        color: var(--subtext);
+        padding: 0;
+      }
+}
+
+
+// SVG
+
+#asterisk {
+    padding: 0;
+    margin: 0;
+    fill: var(--subtext);
+        &:hover {
+        fill: var(--text);
+    }
+}
+
+#logo__horizontal {
+    padding: 0;
+    margin: 0;
+    fill: var(--background);
+    stroke: var(--text);
+    stroke-width: 0.2;
+        &:hover {
+        fill: var(--base);
     }
 }

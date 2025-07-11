@@ -30,8 +30,8 @@ export default function(eleventyConfig) {
 
 	// Copy any .jpg file to `_dist`, via Glob pattern
 	// Keeps the same directory structure.
-	eleventyConfig.addPassthroughCopy("src/**/*.jpg");
-  eleventyConfig.addPassthroughCopy("src/**/*.svg");
+	eleventyConfig.addPassthroughCopy("**/*.jpg");
+  eleventyConfig.addPassthroughCopy("**/*.svg");
 
   eleventyConfig.addPassthroughCopy({ "assets/favicon/": "/" });
 

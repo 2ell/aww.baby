@@ -1,18 +1,24 @@
 :root {
     /* via https://catppuccin.com/palette/ */
-    accent-color: #cba6f7;
-    --background: #cdd6f4;
-    --text: #11111b;
-    --subtext1: #181825;
-    --subtext0: #1e1e2e;
-    --subtext2: #313244;
-    --overlay2: #45475a;
-    --overlay1: #585b70;
-    --overlay0: #6c7086;
-    --surface2: #7d829b;
-    --surface1: #9399b2;
-    --surface0: #a6adc8;
-    --base: #bac2de;
+    accent-color:       #cba6f7;
+    --background:       #cdd6f4;
+    --text:             #11111b;
+    --subtext:          #313244;
+
+    --subtext1: red;
+    --subtext2: orange;
+    --overlay2: blue;
+
+    --dark1:            #1e1e2e;
+    --dark2:            #45475a;
+
+
+    --overlay1:         #585b70;
+    --overlay0:         #6c7086;
+    --surface2:         #7d829b;
+    --surface1:         #9399b2;
+    --surface0:         #a6adc8;
+    --base:             #bac2de;
     --link: #1e66f5;
     --blue:      #89b4fa;
     --lavender:  #b4befe;
@@ -33,10 +39,21 @@
     --text-lg: 1.4rem;
 }
 
-code {
-    color: var(--accent);
+
+.subtext {
+    color: var(--subtext);
 }
 
+.dark {
+    color: var(--dark1);
+}
+
+code {
+    background-color: var(--dark1);
+    background-image: url("grid.svg");
+    padding: 0 0.2rem;
+    color: var(--background);
+}
 
 code,
 kbd,
@@ -47,20 +64,59 @@ samp {
   font-weight: 700;
 }
 
-
 body {
     color: var(--text);
     background-color: var(--background);
 }
 
-a:not([class], .current a, .to-top) {
-    color: var(--subtext1);
+
+// Links without a class (except navigation current)
+
+a:not([class], .current a) {
+    color: var(--subtext);
     text-underline-offset: 0.11rem;
     text-decoration-thickness: 0.09rem;
-    text-decoration-color: var(--overlay0);
+    text-decoration-color: var(--subtext);
       position: relative;
         &:hover {
             text-decoration-thickness: 0.1rem;
                 text-decoration-color: var(--text);
         }
 }
+
+// Collection permalinks
+
+.permalink {
+    color: var(--subtext);
+    text-transform: uppercase;
+    text-decoration-style: dotted;
+    text-underline-offset: 0.11rem;
+    text-decoration-thickness: 0.09rem;
+    text-decoration-color: var(--overlay0);
+    font-size: 0.9em;
+    &:hover {
+        color: var(--text);
+    }
+}
+
+.text-small {
+    font-size: 0.9em;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-lowercase {
+    text-transform: lowercase;
+}
+
+// HOME/COLLECTIONS
+
+.collection__ul li:not(:last-of-type) > div {
+    border-bottom: 1px dotted var(--dark2);
+}
+
+
+
+// POST PAGE

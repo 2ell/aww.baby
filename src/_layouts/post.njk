@@ -21,7 +21,7 @@ layout: base.njk
       {% icon "tabler-f:calendar-event", class="icon-sm" %}
       </i>
     </span>
-    <time class="published__date">{{ date | formatDate('MMMM D, YYYY') }}</time> at <time class="published__time">{{ date | formatDate('h:mm a') }}</time>
+    <time class="published__date subtext">{{ date | formatDate('MMMM D, YYYY') }}</time> at <time class="published__time">{{ date | formatDate('h:mm a') }}</time>
   </div>
 
     <div class="post__tags">
@@ -34,7 +34,7 @@ layout: base.njk
             {% icon "tabler-f:tag", class="icon-sm" %}
          </i>
              {% for tag in tags %}{% if tag != "blog" %}
-            <span><a href="/tags/{{ tag | slugify }}/"> {{ tag }} </a></span>
+            <span><a class="subtext" href="/tags/{{ tag | slugify }}/"> {{ tag }} </a></span>
           {% endif %}{% endfor %}
         {% endif %}
     </div>

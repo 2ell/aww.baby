@@ -2,7 +2,7 @@
 
 .collection__ul {
   padding: 0;
-  margin: 0;
+  margin: 2em 0 0 0;
   list-style: none;
     > li {
     display: flex;
@@ -10,40 +10,19 @@
   }
 }
 
-.collection__item {
-  margin: 1em 0;
-
-}
-
 .collection__ul li:not(:last-of-type) > div {
-  padding: 0 0 2em 0;
-  margin: 1rem 0 2em 0;
-  border-bottom: 1px dotted var(--subtext2);
+  padding: 0 0 1.5em 0;
+  margin: 0 0 2em 0;
 }
 
 .collection__ul li:last-of-type > div {
   margin: 0 0 2em 0;
 }
 
-article .post__date {
-  color: var(--subtext2);
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: 0.9em;
+.collection__item {
+//  background: lightblue;
 }
 
-.collection__perma {
-  color: var(--subtext2);
-  text-transform: uppercase;
-  text-decoration-style: dotted;
-  text-underline-offset: 0.11rem;
-  text-decoration-thickness: 0.09rem;
-  text-decoration-color: var(--overlay0);
-  font-size: 0.9em;
-  &:hover {
-    color: var(--text);
-  }
-}
 
 .collection__title h1 {
   padding: 0;
@@ -59,11 +38,13 @@ article .post__date {
 // POST PAGE
 
 article {
-  padding: 1rem 0 0 0;
+  padding: 1em 0 0 0;
+//  border: 1px solid aqua;
 }
 
 .post__body {
   margin: 1rem 0 0 0;
+//  border: 1px solid red;
 }
 
 .post__footer {
@@ -82,9 +63,6 @@ article {
         padding: 0rem;
         margin: 0 0 0.5rem 0;
       }
-      .post__detail {
-        font-weight: 700;
-      }
 }
 
 .post__published {
@@ -102,6 +80,7 @@ article {
     & span:not(:last-of-type, .icon, .post__detail) {
       &::after {
         content: ',';
+        color: var(--subtext);
         margin-left: -0.1rem;
       }
     }

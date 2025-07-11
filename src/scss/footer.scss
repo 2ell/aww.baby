@@ -4,18 +4,11 @@
   list-style: none;
 }
 
-#footer__nav ul {
-    @include ul-unstyled;
-}
-
 // CONTAINER
 
 #footer {
     --padding: 0.5rem;
-    font-size: var(--text-sm);
 }
-
-
 
 // FOOT SECTIONS
 
@@ -35,9 +28,7 @@
 #foot > * {
     flex: 1 1 var(--min);
     padding: 0.2rem;
-    font-size: var(--text-sm);
-                    a {
-                    font-size: var(--text-sm);
+                a {
                     color: var(--text);
                 }
 }
@@ -57,8 +48,6 @@
     //background-color: var(--green);
 }
 
-
-
         //---- to top
 
         .to-top-wrapper {
@@ -68,22 +57,19 @@
         }
 
 
-
-
-
 // BOTTOM LINE
 
 #bottom-line {
-
-    background-color: var(--subtext1);
+    background-color: var(--dark1);
     color: var(--background);
 
     a {
-        color: var(--background);
-        &:hover {
-            color: var(--base);
-            text-decoration-color: var(--base);
-        }
+        color: var(--base);
+        text-decoration-color: var(--base);
+            &:hover {
+                color: var(--background);
+                text-decoration-color: var(--background);
+            }
     }
 }
 
@@ -105,8 +91,5 @@
 
 #cc {
     align-self: flex-end;
-    & a {
-        font-weight: 500;
-    }
 }
 

@@ -1,7 +1,3 @@
-#top {
-  position: absolute;
-  top: 0;
-}
 
 // SECTIONS
 
@@ -15,11 +11,10 @@ header {
 }
 
 main {
-  max-width: clamp(320px, 90%, 1000px);
   min-height: 95vh;
   margin: auto;
-  padding: 1.5rem clamp(1rem, 5%, 2rem);
-  line-height: 1.4em;
+  max-width: clamp(320px, 90%, 1000px);
+  padding: 1.5rem clamp(0.5rem, 5%, 1rem);
 }
 
 // WRAPPERS
@@ -27,4 +22,34 @@ main {
 .content__wrapper {
   max-width: 40em;
   margin: 0 auto;
+}
+
+// FLEX
+
+.flex {
+  display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-self-end {
+  align-self: flex-end;
 }

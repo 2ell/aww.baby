@@ -2,7 +2,7 @@
 layout: base.njk
 title: 'aww baby'
 ---
-
+<img src="src/assets/svg/grid.svg">
 <ul class="collection__ul">
     {%- for post in collections.blog | reverse -%}
 
@@ -10,7 +10,7 @@ title: 'aww baby'
     <li>
         <div class="collection__item">
       <div class="collection__head">
-          <a class="collection__perma" href="{{ post.url }}" title="Permalink">{{ post.date | blogDate }}</a>
+          <a class="permalink" href="{{ post.url }}" title="Permalink">{{ post.date | blogDate }}</a>
       </div>
                  <div class="post__content">
                   <p>{{ post.content | md | safe }}</p>

@@ -1,20 +1,22 @@
-<span id="top"></span>
-<header>
+<header id="top">
 
-    <div class="header__wrapper">
+    <div class="header__wrapper flex flex-row justify-content-between">
 
     <!-- logo -->
-        <div class="site__title">
-            {% include "partials/logo.njk" %}
+        <div id="header__logo">
+
+    {% include "partials/asterisk.njk" %}
+
         </div>
 
 
     <!-- navigation -->
+     <div id="header__section">
         <div class="header__nav">
           <nav aria-label="Main Navigation">
             <div class="nav__links">
               {% set navPages = collections.all | eleventyNavigation %}
-                <ul>
+                <ul class="inline-flex text-lowercase">
                   {%- for entry in navPages %}
                     <li{% if entry.url == page.url %} class="current"{% endif %}>
                     {{ entry.data.icon }}<a href="{{ entry.url }}">{{ entry.title }}</a>
@@ -23,8 +25,11 @@
                 </ul>
             </div> 
           </nav>
-        </div>
+          <div class="header__box">
 
+          </div>
+        </div>
+</div>
 
   </div>
 

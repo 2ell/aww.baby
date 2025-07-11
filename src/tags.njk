@@ -18,7 +18,5 @@ eleventyComputed:
 ---
 <h1>{{ tag | title }}</h1>
 
-<hr>
-
 {% set postslist = collections[tag] %}
 {% include "partials/post-list.njk" %}
