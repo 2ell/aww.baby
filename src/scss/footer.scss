@@ -60,7 +60,7 @@
 // BOTTOM LINE
 
 #bottom-line {
-    background-color: var(--dark1);
+    background-image: url('/assets/noise.svg');
     color: var(--background);
 
     a {
@@ -82,14 +82,14 @@
     padding: var(--padding);
 }
 
-.bottom-line > * {
-    font-size: var(--text-sm);
-    display: inline-flex;
-    align-items: center;
-    gap: 0.1rem;
+.bottom-left {
+    text-align: left;
 }
 
+
 #cc {
-    align-self: flex-end;
+    display: inline-flex;
+    gap: 0.1rem;
+    align-items: center;
 }
 

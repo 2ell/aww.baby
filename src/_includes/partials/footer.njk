@@ -1,10 +1,6 @@
 <div id="foot">
 
         <div id="foot-left">
-                <div class="to-top-wrapper">
-                        <i>{% icon "tabler-o:arrow-up", class="icon-m" %}</i>
-                        <a href="#top" class="to-top" aria-label="Scroll to Top">to top</a>
-                </div>
         </div>
 
         <div id="foot-center">
@@ -17,14 +13,26 @@
 </div>
 
 <div id="bottom-line">
-        <div class="bottom-line">
+        <div class="bottom-line text-small">
 
-<div>    {% include "partials/logo_horizontal.njk" %}</div>
+<div class="bottom-left flex flex-column">    
+        <div>
+        {% include "partials/logo_horizontal.njk" %}
+        </div>
 
         <div id="cc">
-                                        
-                <i>{% icon "tabler-o:badge-cc" %}</i>
+                made with <i>{% icon "tabler-f:heart", class="icon-sm" %}</i> by <a href="https://laurel.omg.lol/">laurel</a> |
+           <i>{% icon "tabler-o:badge-cc", class="icon-m" %}</i>
                 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+</div>
+
+</div>
+
+        <div class="bottom-right">
+                <div class="to-top-wrapper">
+                        <a href="#top" class="to-top" aria-label="Scroll to Top">to top</a>
+                <i>{% icon "tabler-o:arrow-up", class="icon-m" %}</i>
+                </div>
         </div>
 </div>
 </div>
