@@ -41,6 +41,7 @@ export default function(eleventyConfig) {
 
   eleventyConfig.setFrontMatterParsingOptions({ excerpt: true,   excerpt_separator: '<!-- ex -->' });
 
+
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
     eleventyConfig.addPlugin(timeToRead, {
     speed: '1000 characters per minute',
