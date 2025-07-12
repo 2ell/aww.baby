@@ -5,6 +5,7 @@ import markdownItAttrs from 'markdown-it-attrs';
 import timeToRead from "eleventy-plugin-time-to-read"
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
 import pluginIcons from 'eleventy-plugin-icons';
+import fontAwesomePlugin from "@11ty/font-awesome";
 
 
 function blogDate(input) {
@@ -55,6 +56,7 @@ export default function(eleventyConfig) {
       return data.timing;
     }
   });
+  eleventyConfig.addPlugin(fontAwesomePlugin);
   eleventyConfig.addPlugin(pluginIcons, {
      sources: [
       { name: 'lucide', path: 'node_modules/lucide-static/icons' },
