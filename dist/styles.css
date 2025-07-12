@@ -371,35 +371,16 @@ hr {
   margin: 2em 0 1em 0;
 }
 
-.fa {
-  vertical-align: baseline;
+i {
+  display: flex;
+  align-content: flex-start;
+}
+i svg {
   margin: 0 0.1rem;
   width: 1em;
   height: 1em;
 }
 
-.icon-sm {
-  width: 1em;
-  height: 1em;
-}
-
-.icon-m {
-  width: 1.2em;
-}
-
-.icon-fill {
-  fill: currentColor;
-}
-
-/*
-i {
-    display: inline-flex;
-svg {
-  stroke-width: 0.15rem;
-  align-self: center;
-  }
-}
-*/
 blockquote {
   margin-left: 1rem;
   padding-left: 0.5rem;

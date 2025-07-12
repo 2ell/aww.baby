@@ -12,7 +12,6 @@
         "eleventy-plugin-date": "^1.0.0"
     },
     "dependencies": {
-        "@11ty/font-awesome": "^1.0.0-beta.1",
         "@tabler/icons": "^3.34.0",
         "dayjs": "^1.11.13",
         "eleventy-plugin-icons": "^4.5.3",
